@@ -9,6 +9,4 @@ Additional information
 
 [Download Presentation (PDF)](https://woizischke.com/canyonshooter/canyonshooter.pdf)
 
-Official website: [woizischke.com/canyonshooter](https://woizischke.com/canyonshooter/index.html)
-
-Author (amongst others): [Christian Woizischke](https://woizischke.com)
+Website: [woizischke.com/canyonshooter](https://woizischke.com/canyonshooter/index.html)
