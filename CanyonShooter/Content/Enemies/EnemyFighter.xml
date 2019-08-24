@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+	<Asset Type="DescriptionLibs.EnemyType.EnemyTypeDescription">
+
+		<Model>Fighter</Model>
+		<MaxHitpoints>100</MaxHitpoints>
+		<Speed>50.0</Speed>
+		<Path>0 0 0</Path>
+		<Weapons>
+			<Item>MINIGUN1</Item>
+			<Item>MINIGUN2</Item>
+		</Weapons>
+		<Formation>0 0 0</Formation>
+		<ScorePoints>200</ScorePoints>
+	</Asset>
+
+</XnaContent>

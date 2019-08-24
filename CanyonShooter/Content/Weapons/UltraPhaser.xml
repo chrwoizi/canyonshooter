@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+	<Asset Type="DescriptionLibs.Weapon.WeaponDescription">
+
+		<Model></Model>
+		<Icon>Content/Textures/Hud/ultraphaserIcon</Icon>
+		<Damage>150</Damage>
+		<ProjectileSpeed>400.0</ProjectileSpeed>
+		<FirePause>150</FirePause>
+		<LoopedFire>false</LoopedFire>
+		<AmmoType>LASERCELLS</AmmoType>
+		<AmmoReloadCount>100</AmmoReloadCount>
+		<DefaultAmmo>99999</DefaultAmmo>
+		<AmmoPerShoot>1</AmmoPerShoot>
+		<AutoReload>true</AutoReload>
+		<ProjectileOffset>0 0 -12</ProjectileOffset>
+		<SoundFiring></SoundFiring>
+		<SoundAmmoEmpty>Ammo</SoundAmmoEmpty>
+		<SoundAmmoEmptyMilliseconds>1000</SoundAmmoEmptyMilliseconds>
+		<SoundReload></SoundReload>
+		<SoundReloadMilliseconds>2000</SoundReloadMilliseconds>
+		<SoundStartFire></SoundStartFire>
+		<SoundStartMilliseconds>0</SoundStartMilliseconds>
+		<SoundStopFire></SoundStopFire>
+		<SoundStopMilliseconds>0</SoundStopMilliseconds>
+		<CrossHair>Content/Textures/Hud/fadenkreuzDreieckGruen</CrossHair>
+		<CrossHairFiring>Content/Textures/Hud/fadenkreuzDreieckRot</CrossHairFiring>
+		<CrossHairReloading>Content/Textures/Hud/fadenkreuzDreieckGelb</CrossHairReloading>
+	</Asset>
+
+</XnaContent>

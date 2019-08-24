@@ -1,0 +1,172 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{E37A0763-9424-430A-AE5E-B9D3FE2CB31C}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DescriptionLibs</RootNamespace>
+    <AssemblyName>DescriptionLibs</AssemblyName>
+    <XnaFrameworkVersion>v2.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaCrossPlatformGroupID>282a21df-9f8f-4720-b7d5-6be74ba1be20</XnaCrossPlatformGroupID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86">
+      <Private>False</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Credits\CreditDescription.cs" />
+    <Compile Include="Credits\CreditDescriptionImporter.cs" />
+    <Compile Include="Credits\CreditDescriptionProcessor.cs" />
+    <Compile Include="Credits\CreditDescriptionReader.cs" />
+    <Compile Include="Credits\CreditDescriptionWriter.cs" />
+    <Compile Include="Credits\TextDescription.cs" />
+    <Compile Include="Intro\TextDescription.cs" />
+    <Compile Include="Intro\IntroDescription.cs" />
+    <Compile Include="Intro\IntroDescriptionImporter.cs" />
+    <Compile Include="Intro\IntroDescriptionProcessor.cs" />
+    <Compile Include="Intro\IntroDescriptionReader.cs" />
+    <Compile Include="Intro\IntroDescriptionWriter.cs" />
+    <Compile Include="Item\ItemDescription.cs" />
+    <Compile Include="Item\ItemDescriptionImporter.cs" />
+    <Compile Include="Item\ItemDescriptionProcessor.cs" />
+    <Compile Include="Item\ItemDescriptionReader.cs" />
+    <Compile Include="Item\ItemDescriptionWriter.cs" />
+    <Compile Include="Static\StaticDescription.cs" />
+    <Compile Include="Static\StaticDescriptionImporter.cs" />
+    <Compile Include="Static\StaticDescriptionProcessor.cs" />
+    <Compile Include="Static\StaticDescriptionReader.cs" />
+    <Compile Include="Static\StaticDescriptionWriter.cs" />
+    <Compile Include="Menu\OptionButtonDescription.cs" />
+    <Compile Include="Menu\OptionDescription.cs" />
+    <Compile Include="Menu\OptionDescriptionImporter.cs" />
+    <Compile Include="Menu\OptionDescriptionProcessor.cs" />
+    <Compile Include="Menu\OptionDescriptionReader.cs" />
+    <Compile Include="Menu\OptionDescriptionWriter.cs" />
+    <Compile Include="Menu\OptionpartDescription.cs" />
+    <Compile Include="Menu\ScrollBar\TextureDescription.cs" />
+    <Compile Include="Menu\ScrollBar\ScrollBarDescription.cs" />
+    <Compile Include="Menu\ScrollBar\ScrollBarDescriptionImporter.cs" />
+    <Compile Include="Menu\ScrollBar\ScrollBarDescriptionProcessor.cs" />
+    <Compile Include="Menu\ScrollBar\ScrollBarDescriptionReader.cs" />
+    <Compile Include="Menu\ScrollBar\ScrollBarDescriptionWriter.cs" />
+    <Compile Include="Model\AfterBurnerEffectDescription.cs" />
+    <Compile Include="Weapon\WeaponDescription.cs" />
+    <Compile Include="Weapon\WeaponDescriptionImporter.cs" />
+    <Compile Include="Weapon\WeaponDescriptionProcessor.cs" />
+    <Compile Include="Weapon\WeaponDescriptionReader.cs" />
+    <Compile Include="Weapon\WeaponDescriptionWriter.cs" />
+    <Compile Include="Material\MaterialDescription.cs" />
+    <Compile Include="Material\MaterialDescriptionImporter.cs" />
+    <Compile Include="Material\MaterialDescriptionProcessor.cs" />
+    <Compile Include="Material\MaterialDescriptionReader.cs" />
+    <Compile Include="Material\MaterialDescriptionWriter.cs" />
+    <Compile Include="Material\ShaderDescription.cs" />
+    <Compile Include="Menu\ButtonDescription.cs" />
+    <Compile Include="EnemyType\EnemyTypeDescription.cs" />
+    <Compile Include="EnemyType\EnemyTypeDescriptionImporter.cs" />
+    <Compile Include="EnemyType\EnemyTypeDescriptionProcessor.cs" />
+    <Compile Include="EnemyType\EnemyTypeDescriptionReader.cs" />
+    <Compile Include="EnemyType\EnemyTypeDescriptionWriter.cs" />
+    <Compile Include="Menu\HighscoreDescriptionImporter.cs" />
+    <Compile Include="Menu\HighscoreDescriptionProcessor.cs" />
+    <Compile Include="Menu\HighscoreDescriptionReader.cs" />
+    <Compile Include="Menu\HighscoreDescriptionWriter.cs" />
+    <Compile Include="Menu\HighscorePartDescription.cs" />
+    <Compile Include="Menu\HighscoreDescription.cs" />
+    <Compile Include="Menu\MenuDescription.cs" />
+    <Compile Include="Menu\MenuDescriptionImporter.cs" />
+    <Compile Include="Menu\MenuDescriptionProcessor.cs" />
+    <Compile Include="Menu\MenuDescriptionReader.cs" />
+    <Compile Include="Menu\MenuDescriptionWriter.cs" />
+    <Compile Include="Menu\MenupartDescription.cs" />
+    <Compile Include="Model\Box.cs" />
+    <Compile Include="Model\Capsule.cs" />
+    <Compile Include="Model\CollisionShapes.cs" />
+    <Compile Include="Model\MeshAnimation.cs" />
+    <Compile Include="Model\MeshMaterial.cs" />
+    <Compile Include="Model\ModelDescription.cs" />
+    <Compile Include="Model\ModelDescriptionImporter.cs" />
+    <Compile Include="Model\ModelDescriptionProcessor.cs" />
+    <Compile Include="Model\ModelDescriptionReader.cs" />
+    <Compile Include="Model\ModelDescriptionWriter.cs" />
+    <Compile Include="Model\ParticleEffectDescription.cs" />
+    <Compile Include="Model\RandomRotationConstraints.cs" />
+    <Compile Include="Model\Sphere.cs" />
+    <Compile Include="Model\WeaponDescription.cs" />
+    <Compile Include="Model\WreckageModel.cs" />
+    <Compile Include="ParticleEffects\ParticleEffectDescription.cs" />
+    <Compile Include="ParticleEffects\ParticleEffectDescriptionImporter.cs" />
+    <Compile Include="ParticleEffects\ParticleEffectDescriptionProcessor.cs" />
+    <Compile Include="ParticleEffects\ParticleEffectDescriptionReader.cs" />
+    <Compile Include="ParticleEffects\ParticleEffectDescriptionWriter.cs" />
+    <Compile Include="ParticleEffects\ParticleSettings.cs" />
+    <Compile Include="Profil\ButtonDescription.cs" />
+    <Compile Include="Profil\ProfilDescription.cs" />
+    <Compile Include="Profil\ProfilDescriptionImporter.cs" />
+    <Compile Include="Profil\ProfilDescriptionProcessor.cs" />
+    <Compile Include="Profil\ProfilDescriptionReader.cs" />
+    <Compile Include="Profil\ProfilDescriptionWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Content\Content.contentproj">
+      <Project>b2216733-a5ca-4ce6-bcde-56b931bb5f04</Project>
+      <Visible>False</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.Common.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.NestedContent.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

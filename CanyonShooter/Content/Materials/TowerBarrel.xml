@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+    <Asset Type="DescriptionLibs.Material.MaterialDescription">
+
+      <ShaderDescription>
+        <SurfaceType>Texture</SurfaceType>
+        <Light>true</Light>
+        <ReceiveShadows>true</ReceiveShadows>
+        <NormalMapping>false</NormalMapping>
+        <WireframeOverlay>false</WireframeOverlay>
+      </ShaderDescription>
+
+      <Effect></Effect>
+		  <Technique></Technique>
+
+		  <Texture0>TowerBarrel</Texture0>
+		  <Texture1></Texture1>
+		  <Texture2></Texture2>
+		  <Texture3></Texture3>
+		  <Texture4></Texture4>
+		  <Texture5></Texture5>
+		  <Texture6></Texture6>
+		  <Texture7></Texture7>
+
+		  <EmissiveColor>FF000000</EmissiveColor>
+		  <DiffuseColor>FFFFFFFF</DiffuseColor>
+		  <SpecularColor>FFFFFFFF</SpecularColor>
+		  <Shininess>40</Shininess>
+
+    </Asset>
+
+</XnaContent>

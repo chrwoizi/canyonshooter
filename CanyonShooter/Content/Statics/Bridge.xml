@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+  <Asset Type="DescriptionLibs.Static.StaticDescription">
+
+	  <Model>Bridge</Model>
+	  <Position>0 100 200</Position>
+    
+  </Asset>
+
+</XnaContent>

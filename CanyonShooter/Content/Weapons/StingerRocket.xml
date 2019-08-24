@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+	<Asset Type="DescriptionLibs.Weapon.WeaponDescription">
+
+		<Model></Model>
+		<Icon>Content/Textures/Hud/stingerIcon</Icon>
+		<Damage>500</Damage>
+		<ProjectileSpeed>300.0</ProjectileSpeed>
+		<FirePause>600</FirePause>
+		<LoopedFire>false</LoopedFire>
+		<AmmoType>ROCKETS</AmmoType>
+		<AmmoReloadCount>6</AmmoReloadCount>
+		<DefaultAmmo>99999</DefaultAmmo>
+		<AmmoPerShoot>1</AmmoPerShoot>
+		<AutoReload>true</AutoReload>
+		<ProjectileOffset>1 1 -6</ProjectileOffset>
+		<SoundFiring></SoundFiring>
+		<SoundAmmoEmpty>Ammo</SoundAmmoEmpty>
+		<SoundAmmoEmptyMilliseconds>1000</SoundAmmoEmptyMilliseconds>
+		<SoundReload></SoundReload>
+		<SoundReloadMilliseconds>1000</SoundReloadMilliseconds>
+		<SoundStartFire></SoundStartFire>
+		<SoundStartMilliseconds>100</SoundStartMilliseconds>
+		<SoundStopFire></SoundStopFire>
+		<SoundStopMilliseconds>100</SoundStopMilliseconds>
+		<CrossHair>Content/Textures/Hud/fadenkreuzGruen</CrossHair>
+		<CrossHairFiring>Content/Textures/Hud/fadenkreuzRot</CrossHairFiring>
+		<CrossHairReloading>Content/Textures/Hud/fadenkreuzGelb</CrossHairReloading>
+	</Asset>
+
+</XnaContent>

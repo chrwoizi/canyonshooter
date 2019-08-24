@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+  <Asset Type="DescriptionLibs.Model.ModelDescription">
+
+    <BaseFBX>Drone</BaseFBX>
+    <BaseRotationAngle>0</BaseRotationAngle>
+    <BaseRotationAxis>1 0 0</BaseRotationAxis>
+
+    <RandomRotationConstraints>
+      <X>
+        <Min>0</Min>
+        <Max>0</Max>
+      </X>
+      <Y>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Y>
+      <Z>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Z>
+    </RandomRotationConstraints>
+    
+    <Animations>
+      <Item>
+        <MeshName>Rotor</MeshName>
+        <RotationPoint>0 0 0</RotationPoint>
+        <RotationSpeed>30.5</RotationSpeed>
+        <RotationAxis>0 1 0</RotationAxis>
+        <MaxTranslation>0 0 0</MaxTranslation>
+        <TranslationSpeed>0.0</TranslationSpeed>
+      </Item>
+    </Animations>
+
+    <Materials>
+      <Item>
+        <MeshName>Base</MeshName>
+        <MaterialName>DroneBase</MaterialName>
+      </Item>
+      <Item>
+        <MeshName>Rotor</MeshName>
+        <MaterialName>DroneRotor</MaterialName>
+      </Item>
+    </Materials>
+
+    <Weapons>
+      <Item>
+        <WeaponType>MINIGUN2</WeaponType>
+        <Position>5.0 -1.8 0.0</Position>
+        <RotationAxis>0 0 0</RotationAxis>
+        <RotationAngle>0.0</RotationAngle>
+        <Scaling>1 1 1</Scaling>
+      </Item>
+      <Item>
+        <WeaponType>MINIGUN</WeaponType>
+        <Position>-5.0 -1.8 0.0</Position>
+        <RotationAxis>0 0 0</RotationAxis>
+        <RotationAngle>0.0</RotationAngle>
+        <Scaling>1 1 1</Scaling>
+      </Item>
+    </Weapons>
+    
+	  <ParticleEffects>
+	  </ParticleEffects>
+
+    <AfterBurnerEffects>
+      <Item>
+        <Position>2.25 1 7</Position>
+        <RotationAxis>0 1 0</RotationAxis>
+        <RotationAngle>0</RotationAngle>
+        <Scaling>3.5 3 10</Scaling>
+      </Item>
+      <Item>
+        <Position>-2.15 1 7</Position>
+        <RotationAxis>0 1 0</RotationAxis>
+        <RotationAngle>0</RotationAngle>
+        <Scaling>3.5 3 10</Scaling>
+      </Item>
+    </AfterBurnerEffects>
+
+    <CollisionShapes>
+      <Boxes>
+        <Item>
+          <Size>20 1.4 20</Size>
+          <OffsetPosition>0 4.3 0</OffsetPosition>
+          <OffsetRotationAxis>1 0 0</OffsetRotationAxis>
+          <OffsetRotationAngle>0</OffsetRotationAngle>
+        </Item>
+        <Item>
+          <Size>0.7 2.8 14</Size>
+          <OffsetPosition>4.8 -3 0</OffsetPosition>
+          <OffsetRotationAxis>0 0 1</OffsetRotationAxis>
+          <OffsetRotationAngle>-0.7</OffsetRotationAngle>
+        </Item>
+        <Item>
+          <Size>0.7 2.8 14</Size>
+          <OffsetPosition>-4.8 -3 0</OffsetPosition>
+          <OffsetRotationAxis>0 0 1</OffsetRotationAxis>
+          <OffsetRotationAngle>0.7</OffsetRotationAngle>
+        </Item>
+      </Boxes>
+      <Capsules></Capsules>
+      <Spheres>
+        <Item>
+          <Radius>4</Radius>
+          <OffsetPosition>0 0 -2</OffsetPosition>
+        </Item>
+        <Item>
+          <Radius>4</Radius>
+          <OffsetPosition>0 0 2</OffsetPosition>
+        </Item>
+      </Spheres>
+    </CollisionShapes>
+
+    <Wreckages>
+      <Item>
+        <Model>DroneDestructionPart1</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>DroneDestructionPart1</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>DroneDestructionPart2</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>DroneDestructionPart3</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>DroneDestructionPart3</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>DroneDestructionPart3</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>DroneDestructionPart3</Model>
+        <Position>0 0 0</Position>
+      </Item>
+    </Wreckages>
+
+    <Mass>1000.0</Mass>
+    <Bounciness>0</Bounciness>
+    <Friction>0</Friction>
+    <Hardness>1</Hardness>
+    
+  </Asset>
+
+</XnaContent>

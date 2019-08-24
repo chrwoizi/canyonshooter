@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+	<Asset Type="DescriptionLibs.Weapon.WeaponDescription">
+
+		<Model>Minigun</Model>
+		<Icon>Content/Textures/Hud/minigunIcon</Icon>
+		<Damage>30</Damage>
+		<ProjectileSpeed>500.0</ProjectileSpeed>
+		<FirePause>27.5</FirePause>
+		<LoopedFire>true</LoopedFire>
+		<AmmoType>BULLETS</AmmoType>
+		<AmmoReloadCount>150</AmmoReloadCount>
+		<DefaultAmmo>99999</DefaultAmmo>
+		<AmmoPerShoot>1</AmmoPerShoot>
+		<AutoReload>true</AutoReload>
+		<ProjectileOffset>1 1 -15</ProjectileOffset>
+		<SoundFiring>MFireLoop</SoundFiring>
+		<SoundAmmoEmpty>Ammo</SoundAmmoEmpty>
+		<SoundAmmoEmptyMilliseconds>1000</SoundAmmoEmptyMilliseconds>
+		<SoundReload>ReleaseMines</SoundReload>
+		<SoundReloadMilliseconds>2000</SoundReloadMilliseconds>
+		<SoundStartFire>MFireStart</SoundStartFire>
+		<SoundStartMilliseconds>1500</SoundStartMilliseconds>
+		<SoundStopFire>MFireStop</SoundStopFire>
+		<SoundStopMilliseconds>400</SoundStopMilliseconds>
+		<CrossHair>Content/Textures/Hud/fadenkreuzRundGruen</CrossHair>
+		<CrossHairFiring>Content/Textures/Hud/fadenkreuzRundRot</CrossHairFiring>
+		<CrossHairReloading>Content/Textures/Hud/fadenkreuzRundGelb</CrossHairReloading>
+	</Asset>
+
+</XnaContent>

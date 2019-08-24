@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ProfilProperties>
+
+  <ProfilNummer>4</ProfilNummer>
+  <ProfilName>---</ProfilName>
+  <Active>false</Active>
+  <PositionX>50</PositionX>
+  <PositionY>350</PositionY>
+  <ActionrecX>50</ActionrecX>
+  <ActionrecY>350</ActionrecY>
+  <ActionrecWidth>200</ActionrecWidth>
+  <ActionrecHeigth>20</ActionrecHeigth>
+  <OnlineHighscore>false</OnlineHighscore>
+  <OnlineQuestion>false</OnlineQuestion>
+  <Difficult>1</Difficult>
+  <Resolution>1024x768</Resolution>
+  <Shadow>true</Shadow>
+  <Fog>true</Fog>
+  <Detail>0.5</Detail>
+  <Fullscreen>false</Fullscreen>
+  <AntiAliasing>0x</AntiAliasing>
+  <Music>0.3</Music>
+  <Effect>1</Effect>
+  <Sound>true</Sound>
+  <Playername>Playername</Playername>
+  <Model>Starfighter</Model>
+  <Health>100</Health>
+  <Shield>80</Shield>
+  <Speed>410</Speed>
+  <Fuel>500</Fuel>
+  <Translation>0.5</Translation>
+  <Acceleration>10</Acceleration>
+  <Brake>10</Brake>
+  <Banking>0.01</Banking>
+  <Drift>0.01</Drift>
+  <AutoLevel>0.05</AutoLevel>
+  <Rolling>0.8</Rolling>
+  <mouseIntensity>-0.001</mouseIntensity>
+  <PlayerFirePrim>Left</PlayerFirePrim>
+  <PlayerFireSek>Right</PlayerFireSek>
+  <PlayerLeftDrift>A</PlayerLeftDrift>
+  <PlayerRightDrift>D</PlayerRightDrift>
+  <PlayerBrake>S</PlayerBrake>
+  <PlayerAcceleration>W</PlayerAcceleration>
+  <PlayerBoost>Space</PlayerBoost>
+  <PlayerPrimWeapon1>D1</PlayerPrimWeapon1>
+  <PlayerPrimWeapon2>D2</PlayerPrimWeapon2>
+  <PlayerSekWeapon1>D3</PlayerSekWeapon1>
+  <PlayerSekWeapon2>D4</PlayerSekWeapon2>
+</ProfilProperties>

@@ -1,0 +1,2626 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{73C39693-8F57-4DA4-B6EA-1FFBC952ABD7}</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CanyonShooter</RootNamespace>
+    <AssemblyName>Canyon Shooter</AssemblyName>
+    <XnaFrameworkVersion>v2.0</XnaFrameworkVersion>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <ContentRootDirectory>.</ContentRootDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+    <OutputPath>bin\x86\Debug\Content\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+    <OutputPath>bin\x86\Release\Content\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <OutputPath>bin\x86\Debug\Content\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <OutputPath>bin\Content\Xbox 360\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Content\Effects\Light.fx">
+      <Name>Light</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\Green.xml">
+      <Name>Green</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\Blue.xml">
+      <Name>Blue</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\Black.xml">
+      <Name>Black</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\Red.xml">
+      <Name>Red</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\White.xml">
+      <Name>White</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\butstart.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>butstart</Name>
+    </Compile>
+    <Compile Include="Content\Textures\butstartHI.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>butstartHI</Name>
+    </Compile>
+    <Compile Include="Content\Textures\canyonshooter.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>canyonshooter</Name>
+    </Compile>
+    <Compile Include="Content\Textures\zeiger.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>zeiger</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Effects\Texture.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>Texture</Name>
+    </Compile>
+    <Compile Include="Content\Menu\Hauptmenu.xml">
+      <Name>Hauptmenu</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Materials\Canyon.xml">
+      <Name>Canyon</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Textures\Canyon.Texture1.jpg">
+      <Name>Canyon.Texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <ProcessorParameters_GenerateMipmaps>True</ProcessorParameters_GenerateMipmaps>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Effects\Skybox.fx">
+      <Name>Skybox</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Materials\Skybox.xml">
+      <Name>Skybox</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Textures\Sky0.dds">
+      <Name>Sky0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Textures\Particles\smoke.png">
+      <Name>smoke</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Effects\ParticleEffect.fx">
+      <Name>ParticleEffect</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Textures\Particles\RocketSmoke1.png">
+      <Name>RocketSmoke1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Audio\CanyonShooter.xgs">
+      <Name>CanyonShooter</Name>
+      <Importer>EnemyTypeDescriptionImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Audio\Sounds.xsb">
+      <Name>Sounds</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Audio\Waves.xwb">
+      <Name>Waves</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Content\Textures\Menu\3dmousered.png">
+      <Name>3dmousered</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\Textfield.png">
+      <Name>Textfield</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\status.png">
+      <Name>status</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\svn.png">
+      <Name>svn</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\WaypointTexture.png">
+      <Name>WaypointTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\WaypointTexture.tga">
+      <Name>WaypointTexture_Alpha</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\Black.png">
+      <Name>Black</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\pm.png">
+      <Name>pm</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\room.png">
+      <Name>room</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\team1.png">
+      <Name>team1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\team2.png">
+      <Name>team2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\MenuEasterEgg.png">
+      <Name>MenuEasterEgg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\BlurbBomber.xml">
+      <Name>BlurbBomber</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\BlurbBomber.png">
+      <Name>BlurbBomber</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\BlurbBomberDesc.xml">
+      <Name>BlurbBomberDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\BlurbBomberDestructionPart1Desc.xml">
+      <Name>BlurbBomberDestructionPart1Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\BlurbBomberDestructionPart2Desc.xml">
+      <Name>BlurbBomberDestructionPart2Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\BlurbBomberDestructionPart3Desc.xml">
+      <Name>BlurbBomberDestructionPart3Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\BlurbBomberDestructionPart4Desc.xml">
+      <Name>BlurbBomberDestructionPart4Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\MegaWummaDestructionPart1Desc.xml">
+      <Name>MegaWummaDestructionPart1Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\MegaWummaDestructionPart2Desc.xml">
+      <Name>MegaWummaDestructionPart2Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\MegaWummaDestructionPart3Desc.xml">
+      <Name>MegaWummaDestructionPart3Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\MegaWummaDestructionPart4Desc.xml">
+      <Name>MegaWummaDestructionPart4Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\MegaWumma.xml">
+      <Name>MegaWumma</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\MegaWummaDesc.xml">
+      <Name>MegaWummaDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\MegaWumma.png">
+      <Name>MegaWumma</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\promptcheck2HI.png">
+      <Name>promptcheck2HI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\promptcheck2.png">
+      <Name>promptcheck2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\promptcheck1HI.png">
+      <Name>promptcheck1HI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\promptcheck1.png">
+      <Name>promptcheck1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Enemies\CannonFodder2.xml">
+      <Name>CannonFodder2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Enemies\CannonFodder1.xml">
+      <Name>CannonFodder1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Enemies\CannonFodder3.xml">
+      <Name>CannonFodder3</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Enemies\EnemyFighter.xml">
+      <Name>EnemyFighter</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Enemies\Bomber2.xml">
+      <Name>Bomber2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Enemies\Bomber1.xml">
+      <Name>Bomber1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Enemies\HeliFighter2.xml">
+      <Name>HeliFighter2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Enemies\HeliFighter1.xml">
+      <Name>HeliFighter1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Splash.png">
+      <Name>Splash</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\Waypoint.xml">
+      <Name>Waypoint</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\WaypointDesc.xml">
+      <Name>WaypointDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\BalkenFuel.png">
+      <Name>BalkenFuel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\TowerBunker.xml">
+      <Name>TowerBunker</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\TowerBunker.png">
+      <Name>TowerBunker</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxResetHI.png">
+      <Name>listboxResetHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxReset.png">
+      <Name>listboxReset</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxCancelHI.png">
+      <Name>listboxCancelHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxCancel.png">
+      <Name>listboxCancel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Fuel_Medium.xml">
+      <Name>Fuel_Medium</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Fuel_Small.xml">
+      <Name>Fuel_Small</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Fuel_Large.xml">
+      <Name>Fuel_Large</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\TowerDesc.xml">
+      <Name>TowerDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\TowerBarrel.png">
+      <Name>TowerBarrel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\TowerBase.png">
+      <Name>TowerBase</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\TowerBarrel.xml">
+      <Name>TowerBarrel</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\TowerBase.xml">
+      <Name>TowerBase</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\HUD2-FUELBAR.png">
+      <Name>HUD2-FUELBAR</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart1Desc.xml">
+      <Name>G35hopperDestructionPart1Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart2Desc.xml">
+      <Name>G35hopperDestructionPart2Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart3Desc.xml">
+      <Name>G35hopperDestructionPart3Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart4Desc.xml">
+      <Name>G35hopperDestructionPart4Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart5Desc.xml">
+      <Name>G35hopperDestructionPart5Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart6Desc.xml">
+      <Name>G35hopperDestructionPart6Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\MenuEasterEgg.png">
+      <Name>MenuEasterEgg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\FighterDestructionPart1Desc.xml">
+      <Name>FighterDestructionPart1Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\FighterDestructionPart2Desc.xml">
+      <Name>FighterDestructionPart2Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\FighterDestructionPart3Desc.xml">
+      <Name>FighterDestructionPart3Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\FighterDestructionPart4Desc.xml">
+      <Name>FighterDestructionPart4Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35egerDestructionPart1Desc.xml">
+      <Name>F35egerDestructionPart1Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35egerDestructionPart2Desc.xml">
+      <Name>F35egerDestructionPart2Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35egerDestructionPart3Desc.xml">
+      <Name>F35egerDestructionPart3Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35egerDestructionPart4Desc.xml">
+      <Name>F35egerDestructionPart4Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35egerDestructionPart5Desc.xml">
+      <Name>F35egerDestructionPart5Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\StarfighterDestructionPart1Desc.xml">
+      <Name>StarfighterDestructionPart1Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\StarfighterDestructionPart2Desc.xml">
+      <Name>StarfighterDestructionPart2Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\StarfighterDestructionPart3Desc.xml">
+      <Name>StarfighterDestructionPart3Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\StarfighterDestructionPart4Desc.xml">
+      <Name>StarfighterDestructionPart4Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\DroneDestructionPart2Desc.xml">
+      <Name>DroneDestructionPart2Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\DroneDestructionPart3Desc.xml">
+      <Name>DroneDestructionPart3Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\DroneDestructionPart1Desc.xml">
+      <Name>DroneDestructionPart1Desc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butOnHs.png">
+      <Name>butOnHs</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butOnHsHI.png">
+      <Name>butOnHsHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barHighscoreOnline.png">
+      <Name>barHighscoreOnline</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Menu\ScrollBarXML.xml">
+      <Name>ScrollBarXML</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Statics\Bridge.xml">
+      <Name>Bridge</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\Beton.xml">
+      <Name>Beton</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Bridge.png">
+      <Name>Bridge</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\BridgeDesc.xml">
+      <Name>BridgeDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\minigunIcon.png">
+      <Name>minigunIcon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\plasmagunIcon.png">
+      <Name>plasmagunIcon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\stingerIcon.png">
+      <Name>stingerIcon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\ultraphaserIcon.png">
+      <Name>ultraphaserIcon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\lasercell.png">
+      <Name>lasercell</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\life.png">
+      <Name>life</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\plasma.png">
+      <Name>plasma</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\HUD2-BOOSTER-WARNING.png">
+      <Name>HUD2-BOOSTER-WARNING</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\HUD2-BOOSTBAR.png">
+      <Name>HUD2-BOOSTBAR</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\HUD2-HEALTHBAR.png">
+      <Name>HUD2-HEALTHBAR</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\HUD2-SHIELDBAR.png">
+      <Name>HUD2-SHIELDBAR</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\HUD2-BACK.png">
+      <Name>HUD2-BACK</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\HUD2-FRONT.png">
+      <Name>HUD2-FRONT</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\HUD2-VALUES.png">
+      <Name>HUD2-VALUES</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\BalkenHealth.png">
+      <Name>BalkenHealth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\Final.xml">
+      <Name>Final</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\FinalDesc.xml">
+      <Name>FinalDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Final.png">
+      <Name>Final</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\bar.png">
+      <Name>bar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\TrafficLight1.png">
+      <Name>TrafficLight1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\TrafficLight2.png">
+      <Name>TrafficLight2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\TrafficLight3.png">
+      <Name>TrafficLight3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\TrafficLightGO.png">
+      <Name>TrafficLightGO</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\TrafficLight.xml">
+      <Name>TrafficLight</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\TrafficLight.png">
+      <Name>TrafficLight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\TrafficLightDesc.xml">
+      <Name>TrafficLightDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Ammo_Bullets.xml">
+      <Name>Ammo_Bullets</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Ammo_LaserCells.xml">
+      <Name>Ammo_LaserCells</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Ammo_PlasmaBalls.xml">
+      <Name>Ammo_PlasmaBalls</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Ammo_Rockets.xml">
+      <Name>Ammo_Rockets</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\ExtraLive.xml">
+      <Name>ExtraLive</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Health_Large.xml">
+      <Name>Health_Large</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Health_Medium.xml">
+      <Name>Health_Medium</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Health_Small.xml">
+      <Name>Health_Small</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Shield_Large.xml">
+      <Name>Shield_Large</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Shield_Medium.xml">
+      <Name>Shield_Medium</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Shield_Small.xml">
+      <Name>Shield_Small</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Weapon_Minigun.xml">
+      <Name>Weapon_Minigun</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Weapon_PlasmaGun.xml">
+      <Name>Weapon_PlasmaGun</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Weapon_StingerRocket.xml">
+      <Name>Weapon_StingerRocket</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Items\Weapon_UltraPhaser.xml">
+      <Name>Weapon_UltraPhaser</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\Drone.png">
+      <Name>Drone</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\F35eger.png">
+      <Name>F35eger</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\Fighter.png">
+      <Name>Fighter</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\G35Hopper.png">
+      <Name>G35Hopper</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\Starfighter.png">
+      <Name>Starfighter</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\05-dronegun.jpg">
+      <Name>05-dronegun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\07-071213-04.jpg">
+      <Name>07-071213-04</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\11-2007_11140020.JPG">
+      <Name>11-2007_11140020</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\17-080310.jpg">
+      <Name>17-080310</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Credits\Platzhalter.png">
+      <Name>Platzhalter</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Enemies\Tank.xml">
+      <Name>Tank</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\TankTurret.xml">
+      <Name>TankTurret</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\TankBase.xml">
+      <Name>TankBase</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\TankDesc.xml">
+      <Name>TankDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\TankBase.png">
+      <Name>TankBase</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\PlasmaGun.png">
+      <Name>PlasmaGun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\PlasmaGun.xml">
+      <Name>PlasmaGun</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\pushbutton.png">
+      <Name>pushbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\bar.png">
+      <Name>bar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\munitionMinigun.png">
+      <Name>munitionMinigun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\munitionPhaser.png">
+      <Name>munitionPhaser</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\munitionPlasma.png">
+      <Name>munitionPlasma</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\munitionRocket.png">
+      <Name>munitionRocket</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\AfterBurner.tga">
+      <Name>AfterBurner</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\AfterBurner.xml">
+      <Name>AfterBurner</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\Accept.png">
+      <Name>Accept</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Credits\Credits.xml">
+      <Name>Credits</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Credits\Credits.xml">
+      <Name>Credits</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\AcceptHI.png">
+      <Name>AcceptHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\Decline.png">
+      <Name>Decline</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\DeclineHI.png">
+      <Name>DeclineHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\OptionDialogMid.png">
+      <Name>OptionDialogMid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\OptionBut.png">
+      <Name>OptionBut</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\OptionButHI.png">
+      <Name>OptionButHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\OptionDialogBottom.png">
+      <Name>OptionDialogBottom</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\OptionDialogLeft.png">
+      <Name>OptionDialogLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\OptionDialogRight.png">
+      <Name>OptionDialogRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\OptionDialogTop.png">
+      <Name>OptionDialogTop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\OptionGap.png">
+      <Name>OptionGap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\OptionDialog\OptionTitel.png">
+      <Name>OptionTitel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\dither.png">
+      <Name>dither</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Menu\OptionMenu.xml">
+      <Name>OptionMenu</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzDreieckGelb.png">
+      <Name>fadenkreuzDreieckGelb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzDreieckGruen.png">
+      <Name>fadenkreuzDreieckGruen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzDreieckRot.png">
+      <Name>fadenkreuzDreieckRot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzDreieckViolett.png">
+      <Name>fadenkreuzDreieckViolett</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzGelb.png">
+      <Name>fadenkreuzGelb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzKreiseGelb.png">
+      <Name>fadenkreuzKreiseGelb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzKreiseGruen.png">
+      <Name>fadenkreuzKreiseGruen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzKreiseRot.png">
+      <Name>fadenkreuzKreiseRot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzKreiseViolett.png">
+      <Name>fadenkreuzKreiseViolett</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzKreuzGelb.png">
+      <Name>fadenkreuzKreuzGelb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzKreuzGruen.png">
+      <Name>fadenkreuzKreuzGruen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzKreuzRot.png">
+      <Name>fadenkreuzKreuzRot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzKreuzViolett.png">
+      <Name>fadenkreuzKreuzViolett</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzRundGelb.png">
+      <Name>fadenkreuzRundGelb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzRundViolett.png">
+      <Name>fadenkreuzRundViolett</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzViolett.png">
+      <Name>fadenkreuzViolett</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzGruen.png">
+      <Name>fadenkreuzGruen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzRot.png">
+      <Name>fadenkreuzRot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzRundGruen.png">
+      <Name>fadenkreuzRundGruen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\fadenkreuzRundRot.png">
+      <Name>fadenkreuzRundRot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barHighscoreReset.png">
+      <Name>barHighscoreReset</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butReset.png">
+      <Name>butReset</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butResetHI.png">
+      <Name>butResetHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\prompt.png">
+      <Name>prompt</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\promptacc.png">
+      <Name>promptacc</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\promptaccHI.png">
+      <Name>promptaccHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\promptdec.png">
+      <Name>promptdec</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\promptdecHI.png">
+      <Name>promptdecHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\scbuttop.png">
+      <Name>scbuttop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\HistoryBackground.png">
+      <Name>HistoryBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Intro\Intro.xml">
+      <Name>Intro</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Content\Enemies\Kamidrones1.xml">
+      <Name>Kamidrones1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\KamidroneDesc.xml">
+      <Name>KamidroneDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\ParticleEffects\MinigunReloadSmoke.xml">
+      <Name>MinigunReloadSmoke</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barHighscoreBack.png">
+      <Name>barHighscoreBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barHighscoreEasy.png">
+      <Name>barHighscoreEasy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barHighscoreHeavy.png">
+      <Name>barHighscoreHeavy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barHighscoreNormal.png">
+      <Name>barHighscoreNormal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barMainReturn.png">
+      <Name>barMainReturn</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barOptionBack.png">
+      <Name>barOptionBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barOptionControl.png">
+      <Name>barOptionControl</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barOptionGraphic.png">
+      <Name>barOptionGraphic</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barOptionPlayerConfig.png">
+      <Name>barOptionPlayerConfig</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barOptionProfil.png">
+      <Name>barOptionProfil</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barOptionSound.png">
+      <Name>barOptionSound</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butBack.png">
+      <Name>butBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butBackHI.png">
+      <Name>butBackHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butControl.png">
+      <Name>butControl</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butControlHI.png">
+      <Name>butControlHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butEasy.png">
+      <Name>butEasy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butEasyHI.png">
+      <Name>butEasyHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butGraphic.png">
+      <Name>butGraphic</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butGraphicHI.png">
+      <Name>butGraphicHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butHeavy.png">
+      <Name>butHeavy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butHeavyHI.png">
+      <Name>butHeavyHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butNormal.png">
+      <Name>butNormal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butNormalHI.png">
+      <Name>butNormalHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butPlayerConfig.png">
+      <Name>butPlayerConfig</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butPlayerConfigHI.png">
+      <Name>butPlayerConfigHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butReturn.png">
+      <Name>butReturn</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butReturnHI.png">
+      <Name>butReturnHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butSound.png">
+      <Name>butSound</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butSoundHI.png">
+      <Name>butSoundHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\shift_leftHI.png">
+      <Name>shift_leftHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\shift_rightHI.png">
+      <Name>shift_rightHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\PlasmaBall.png">
+      <Name>PlasmaBall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Weapons\PlasmaGun.xml">
+      <Name>PlasmaGun</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\PlasmaGunDesc.xml">
+      <Name>PlasmaGunDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barMainExit.png">
+      <Name>barMainExit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barMainGleiter.png">
+      <Name>barMainGleiter</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barMainHighscore.png">
+      <Name>barMainHighscore</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barMainOptions.png">
+      <Name>barMainOptions</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barMainPlay.png">
+      <Name>barMainPlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\menu_bg.png">
+      <Name>menu_bg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxok.png">
+      <Name>listboxok</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxokHI.png">
+      <Name>listboxokHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxzurückHI.png">
+      <Name>listboxzurückHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxzurück.png">
+      <Name>listboxzurück</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listbut.png">
+      <Name>listbut</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listbutHI.png">
+      <Name>listbutHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\barMainProfil.png">
+      <Name>barMainProfil</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butbeend.png">
+      <Name>butbeend</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butbeendHI.png">
+      <Name>butbeendHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butGleit.png">
+      <Name>butGleit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butGleitHI.png">
+      <Name>butGleitHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butminus.png">
+      <Name>butminus</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butminusHI.png">
+      <Name>butminusHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butopt.png">
+      <Name>butopt</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butoptHI.png">
+      <Name>butoptHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butplus.png">
+      <Name>butplus</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butplusHI.png">
+      <Name>butplusHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butProfil.png">
+      <Name>butProfil</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butProfilHi.png">
+      <Name>butProfilHi</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butScore.png">
+      <Name>butScore</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butScoreHI.png">
+      <Name>butScoreHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butstart.png">
+      <Name>butstart</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\butstartHI.png">
+      <Name>butstartHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\Entry.png">
+      <Name>Entry</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\optionen.png">
+      <Name>optionen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\shift_left.png">
+      <Name>shift_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\shift_right.png">
+      <Name>shift_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\zeiger.png">
+      <Name>zeiger</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\heightmap\hm1.png">
+      <Name>hm1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\heightmap\hm2.png">
+      <Name>hm2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\heightmap\hm3.png">
+      <Name>hm3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\heightmap\hm4.png">
+      <Name>hm4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\barProfilReady.png">
+      <Name>barProfilReady</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\Chooser.png">
+      <Name>Chooser</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Car.png">
+      <Name>Car</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\Car.xml">
+      <Name>Car</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\CarDesc.xml">
+      <Name>CarDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\ParticleEffects\ExplosionBig.xml">
+      <Name>ExplosionBig</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\ParticleEffects\ExplosionMiddle.xml">
+      <Name>ExplosionMiddle</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Console1.png">
+      <Name>Console1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Weapons\UltraPhaser.xml">
+      <Name>UltraPhaser</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Weapons\StingerRocket.xml">
+      <Name>StingerRocket</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Weapons\Minigun.xml">
+      <Name>Minigun</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Particles\explosion3.png">
+      <Name>explosion3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\buttonback.png">
+      <Name>buttonback</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\DeadCaves.Normal.png">
+      <Name>DeadCaves.Normal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\DeadCaves.png">
+      <Name>DeadCaves</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Menu\HighscoreMenu.xml">
+      <Name>HighscoreMenu</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\PhaserTex2.xml">
+      <Name>PhaserTex2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\PhaserTex3.xml">
+      <Name>PhaserTex3</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\TripplePhaser.png">
+      <Name>TripplePhaser</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\DualPhaser.png">
+      <Name>DualPhaser</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\barProfilCreate.png">
+      <Name>barProfilCreate</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\barProfilDelete.png">
+      <Name>barProfilDelete</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\menu_bg.png">
+      <Name>menu_bg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\heightmap\hm0.png">
+      <Name>hm0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\ProfilTextBack.png">
+      <Name>ProfilTextBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\Profile.png">
+      <Name>Profile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\ArrowLeft.png">
+      <Name>ArrowLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\ArrowRight.png">
+      <Name>ArrowRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\BalkenSchild.png">
+      <Name>BalkenSchild</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Chooser\BalkenSpeed.png">
+      <Name>BalkenSpeed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Canyon.Normal.png">
+      <Name>Canyon.Normal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <ProcessorParameters_GenerateMipmaps>True</ProcessorParameters_GenerateMipmaps>
+    </Compile>
+    <Compile Include="Content\Textures\Canyon.png">
+      <Name>Canyon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <ProcessorParameters_GenerateMipmaps>True</ProcessorParameters_GenerateMipmaps>
+    </Compile>
+    <Compile Include="Content\Materials\Rock.xml">
+      <Name>Rock</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\SmallRock.xml">
+      <Name>SmallRock</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\SmallRockDesc.xml">
+      <Name>SmallRockDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\TussocksDesc.xml">
+      <Name>TussocksDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\tussocks.tga">
+      <Name>tussocks</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\Tussocks.xml">
+      <Name>Tussocks</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\RocksDesc.xml">
+      <Name>RocksDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\DebrisTest.xml">
+      <Name>DebrisTest</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\debrisTestDesc.xml">
+      <Name>debrisTestDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\BulletTex.xml">
+      <Name>BulletTex</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Bullet.png">
+      <Name>Bullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\ProfilText.png">
+      <Name>ProfilText</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\butBuild.png">
+      <Name>butBuild</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\butBuildHI.png">
+      <Name>butBuildHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\butDel.png">
+      <Name>butDel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\butDelHI.png">
+      <Name>butDelHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\butstart.png">
+      <Name>butstart</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\butstartHI.png">
+      <Name>butstartHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Profils\Marker.png">
+      <Name>Marker</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\MinigunBarrel.png">
+      <Name>MinigunBarrel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\MinigunBase.png">
+      <Name>MinigunBase</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\MinigunBarrel.xml">
+      <Name>MinigunBarrel</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\MinigunBase.xml">
+      <Name>MinigunBase</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\MinigunDesc.xml">
+      <Name>MinigunDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\G35hopper.xml">
+      <Name>G35hopper</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\G35hopper.png">
+      <Name>G35hopper</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDesc.xml">
+      <Name>G35hopperDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\DroneBase.png">
+      <Name>DroneBase</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\DroneRotor.png">
+      <Name>DroneRotor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\DroneBase.xml">
+      <Name>DroneBase</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\DroneRotor.xml">
+      <Name>DroneRotor</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\DroneDesc.xml">
+      <Name>DroneDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\Fighter.xml">
+      <Name>Fighter</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\FighterDesc.xml">
+      <Name>FighterDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Fighter.png">
+      <Name>Fighter</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Particles\explosion.png">
+      <Name>explosion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Particles\explosion2.png">
+      <Name>explosion2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\Starfighter.xml">
+      <Name>Starfighter</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\StarfighterDesc.xml">
+      <Name>StarfighterDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Starfighter.png">
+      <Name>Starfighter</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\F35eger.xml">
+      <Name>F35eger</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35egerDesc.xml">
+      <Name>F35egerDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\F35eger.png">
+      <Name>F35eger</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\ParticleEffects\BlastPipe.xml">
+      <Name>BlastPipe</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\ParticleEffects\SmokePlume.xml">
+      <Name>SmokePlume</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\ParticleEffects\RocketSmoke.xml">
+      <Name>RocketSmoke</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Canyon.Texture2.png">
+      <Name>Canyon.Texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <ProcessorParameters_GenerateMipmaps>True</ProcessorParameters_GenerateMipmaps>
+    </Compile>
+    <Compile Include="Content\Textures\Particles\BlastPipe1.png">
+      <Name>BlastPipe1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\StingerTex.png">
+      <Name>StingerTex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\StingerTex.xml">
+      <Name>StingerTex</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\RockDesc.xml">
+      <Name>RockDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\StingerDesc.xml">
+      <Name>StingerDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\item_health.xml">
+      <Name>item_health</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\item_shield.xml">
+      <Name>item_shield</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\box_shield.png">
+      <Name>box_shield</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\box.xml">
+      <Name>box</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxback.png">
+      <Name>listboxback</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxheader.png">
+      <Name>listboxheader</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxleft.png">
+      <Name>listboxleft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxright.png">
+      <Name>listboxright</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\listboxstatus.png">
+      <Name>listboxstatus</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\scbutdown.png">
+      <Name>scbutdown</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\scbutmid.png">
+      <Name>scbutmid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\scroll.png">
+      <Name>scroll</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\scrolldown.png">
+      <Name>scrolldown</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Menu\scrollup.png">
+      <Name>scrollup</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\UltraPhaser.png">
+      <Name>UltraPhaser</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\UltraPhaserMetal.xml">
+      <Name>UltraPhaserMetal</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\UltraPhaserDesc.xml">
+      <Name>UltraPhaserDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\PhaserTex.xml">
+      <Name>PhaserTex</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Phaser.png">
+      <Name>Phaser</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Materials\LitWhite.xml">
+      <Name>LitWhite</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Profil\Profil.xml">
+      <Name>Profil</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\butoptBar.png">
+      <Name>butoptBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\butbeendBar.png">
+      <Name>butbeendBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\butstartBar.png">
+      <Name>butstartBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\health.png">
+      <Name>health</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\munition.png">
+      <Name>munition</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Hud\shield.png">
+      <Name>shield</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\butplus.png">
+      <Name>butplus</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\butplusHI.png">
+      <Name>butplusHI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\Particles\LaserWall.png">
+      <Name>LaserWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arial.spritefont">
+      <Name>Arial</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Courier.spritefont">
+      <Name>Courier</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DescriptionLibs\DescriptionLibs.csproj">
+      <Project>{E37A0763-9424-430A-AE5E-B9D3FE2CB31C}</Project>
+      <Name>DescriptionLibs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Effects\Color.fx">
+      <Name>Color</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\TextureConstantsInstancing.fx">
+      <Name>TextureConstantsInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\ColorConstantsInstancing.fx">
+      <Name>ColorConstantsInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\LightConstantsInstancing.fx">
+      <Name>LightConstantsInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\Wireframe.fx">
+      <Name>Wireframe</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\ColorHardwareInstancing.fx">
+      <Name>ColorHardwareInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\LightHardwareInstancing.fx">
+      <Name>LightHardwareInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\TextureHardwareInstancing.fx">
+      <Name>TextureHardwareInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\Shadow.fx">
+      <Name>Shadow</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\Depth.fx">
+      <Name>Depth</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\DepthConstantsInstancing.fx">
+      <Name>DepthConstantsInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\DepthHardwareInstancing.fx">
+      <Name>DepthHardwareInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\ShadowConstantsInstancing.fx">
+      <Name>ShadowConstantsInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\ShadowHardwareInstancing.fx">
+      <Name>ShadowHardwareInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\WireframeHardwareInstancing.fx">
+      <Name>WireframeHardwareInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\WireframeConstantsInstancing.fx">
+      <Name>WireframeConstantsInstancing</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\NormalMapping.fx">
+      <Name>NormalMapping</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <None Include="Content\Effects\includes\specialEffects.fxh">
+      <Name>specialEffects</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </None>
+    <None Include="Content\Effects\includes\light.fxh">
+      <Name>light</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </None>
+    <Compile Include="Content\Effects\PostProcessing\RadialBlur.fx">
+      <Name>RadialBlur</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\PostProcessing\RadialBlurCombine.fx">
+      <Name>RadialBlurCombine</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\BlurbBomber.fbx">
+      <Name>BlurbBomber</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\BlurbBomberDestructionPart1.fbx">
+      <Name>BlurbBomberDestructionPart1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\BlurbBomberDestructionPart2.fbx">
+      <Name>BlurbBomberDestructionPart2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\BlurbBomberDestructionPart3.fbx">
+      <Name>BlurbBomberDestructionPart3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\MegaWummaDestructionPart1.fbx">
+      <Name>MegaWummaDestructionPart1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\MegaWummaDestructionPart2.fbx">
+      <Name>MegaWummaDestructionPart2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\MegaWummaDestructionPart3.fbx">
+      <Name>MegaWummaDestructionPart3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\MegaWummaDestructionPart4.fbx">
+      <Name>MegaWummaDestructionPart4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\MegaWumma.fbx">
+      <Name>MegaWumma</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Waypoint.fbx">
+      <Name>Waypoint</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Tower.fbx">
+      <Name>Tower</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart1.fbx">
+      <Name>G35hopperDestructionPart1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart2.fbx">
+      <Name>G35hopperDestructionPart2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart3.fbx">
+      <Name>G35hopperDestructionPart3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart4.fbx">
+      <Name>G35hopperDestructionPart4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart5.fbx">
+      <Name>G35hopperDestructionPart5</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopperDestructionPart6.fbx">
+      <Name>G35hopperDestructionPart6</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\FighterDestructionPart1.fbx">
+      <Name>FighterDestructionPart1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\FighterDestructionPart2.fbx">
+      <Name>FighterDestructionPart2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\FighterDestructionPart3.fbx">
+      <Name>FighterDestructionPart3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\FighterDestructionPart4.fbx">
+      <Name>FighterDestructionPart4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35egerDestructionPart1.fbx">
+      <Name>F35egerDestructionPart1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35egerDestructionPart2.fbx">
+      <Name>F35egerDestructionPart2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35egerDestructionPart3.fbx">
+      <Name>F35egerDestructionPart3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35egerDestructionPart4.fbx">
+      <Name>F35egerDestructionPart4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35egerDestructionPart5.fbx">
+      <Name>F35egerDestructionPart5</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\StarfighterDestructionPart1.fbx">
+      <Name>StarfighterDestructionPart1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\StarfighterDestructionPart2.fbx">
+      <Name>StarfighterDestructionPart2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\StarfighterDestructionPart3.fbx">
+      <Name>StarfighterDestructionPart3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\StarfighterDestructionPart4.fbx">
+      <Name>StarfighterDestructionPart4</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\DroneDestructionPart2.fbx">
+      <Name>DroneDestructionPart2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\DroneDestructionPart3.fbx">
+      <Name>DroneDestructionPart3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\DroneDestructionPart1.fbx">
+      <Name>DroneDestructionPart1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Bridge.fbx">
+      <Name>Bridge</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="HudFont.Speed.spritefont">
+      <Name>HudFont.Speed</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="HudFont.Huge.spritefont">
+      <Name>HudFont.Huge</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="HudFont.Medium.spritefont">
+      <Name>HudFont.Medium</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="HudFont.Small.spritefont">
+      <Name>HudFont.Small</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Final.fbx">
+      <Name>Final</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\TrafficLight.fbx">
+      <Name>TrafficLight</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\TrafficLight.fx">
+      <Name>TrafficLight</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\AfterBurner.fx">
+      <Name>AfterBurner</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\AfterBurner_Power.tga">
+      <Name>AfterBurner_Power</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Tank.fbx">
+      <Name>Tank</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\PlasmaGun.fbx">
+      <Name>PlasmaGun</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Kamidrone.fbx">
+      <Name>Kamidrone</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Car.fbx">
+      <Name>Car</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\tussock.FBX">
+      <Name>tussock</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\PostProcessing\BloomCombine.fx">
+      <Name>BloomCombine</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\PostProcessing\BloomExtract.fx">
+      <Name>BloomExtract</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\PostProcessing\GaussianBlur.fx">
+      <Name>GaussianBlur</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\SmallRock.fbx">
+      <Name>SmallRock</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Effects\Wireframe.fx">
+      <Name>Wireframe</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Cube.fbx">
+      <Name>Cube</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\SphereLowPoly.fbx">
+      <Name>SphereLowPoly</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Minigun.fbx">
+      <Name>Minigun</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\G35hopper.fbx">
+      <Name>G35hopper</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Drone.fbx">
+      <Name>Drone</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Fighter.fbx">
+      <Name>Fighter</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Starfighter.fbx">
+      <Name>Starfighter</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\F35eger.fbx">
+      <Name>F35eger</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\box.fbx">
+      <Name>box</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\ParticleEffects\Explosion.xml">
+      <Name>Explosion</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\SkyboxFlo.dds">
+      <Name>SkyboxFlo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Rock.fbx">
+      <Name>Rock</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\Stinger.fbx">
+      <Name>Stinger</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\UltraPhaser.fbx">
+      <Name>UltraPhaser</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\item_shieldDesc.xml">
+      <Name>item_shieldDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Models\item_healthDesc.xml">
+      <Name>item_healthDesc</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="Content\Textures\TankTurret.png">
+      <Name>TankTurret</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+</Project>

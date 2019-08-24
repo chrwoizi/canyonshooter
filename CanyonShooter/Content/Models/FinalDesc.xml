@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+  <Asset Type="DescriptionLibs.Model.ModelDescription">
+
+    <BaseFBX>Final</BaseFBX>
+    <BaseRotationAngle>90</BaseRotationAngle>
+    <BaseRotationAxis>0 1 0</BaseRotationAxis>
+
+    <RandomRotationConstraints>
+      <X>
+        <Min>0</Min>
+        <Max>0</Max>
+      </X>
+      <Y>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Y>
+      <Z>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Z>
+    </RandomRotationConstraints>
+
+    <Animations>
+    </Animations>
+
+    <Materials>
+      <Item>
+        <MeshName>*</MeshName>
+        <MaterialName>Final</MaterialName>
+      </Item>
+    </Materials>
+
+    <Weapons>
+    </Weapons>
+    
+	  <ParticleEffects>
+	  </ParticleEffects>
+
+    <AfterBurnerEffects>
+    </AfterBurnerEffects>
+
+    <CollisionShapes>
+      <Boxes>
+      </Boxes>
+      <Capsules></Capsules>
+      <Spheres></Spheres>
+    </CollisionShapes>
+
+    <Wreckages>
+    </Wreckages>
+
+    <Mass>1000.0</Mass>
+    <Bounciness>0</Bounciness>
+    <Friction>0</Friction>
+    <Hardness>1</Hardness>
+    
+  </Asset>
+
+</XnaContent>

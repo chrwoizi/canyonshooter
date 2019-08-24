@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+	<Asset Type="DescriptionLibs.Item.ItemDescription">
+		<ItemType>WEAPON</ItemType>
+		<NameValue>PLASMAGUN</NameValue>
+		<Value>1</Value>
+	</Asset>
+</XnaContent>

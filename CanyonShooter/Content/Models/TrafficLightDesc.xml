@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+  <Asset Type="DescriptionLibs.Model.ModelDescription">
+
+    <BaseFBX>TrafficLight</BaseFBX>
+    <BaseRotationAngle>0</BaseRotationAngle>
+    <BaseRotationAxis>1 0 0</BaseRotationAxis>
+
+    <RandomRotationConstraints>
+      <X>
+        <Min>0</Min>
+        <Max>0</Max>
+      </X>
+      <Y>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Y>
+      <Z>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Z>
+    </RandomRotationConstraints>
+
+    <Animations>
+    </Animations>
+
+    <Materials>
+      <Item>
+        <MeshName>*</MeshName>
+        <MaterialName>TrafficLight</MaterialName>
+      </Item>
+    </Materials>
+
+    <Weapons>
+    </Weapons>
+    
+	  <ParticleEffects>
+    </ParticleEffects>
+
+    <AfterBurnerEffects>
+      <Item>
+        <Position>2.5 -4 0</Position>
+        <RotationAxis>1 0 0</RotationAxis>
+        <RotationAngle>1.570796</RotationAngle>
+        <Scaling>3 3 7</Scaling>
+      </Item>
+      <Item>
+        <Position>-3.6 -4 0</Position>
+        <RotationAxis>1 0 0</RotationAxis>
+        <RotationAngle>1.570796</RotationAngle>
+        <Scaling>3 3 7</Scaling>
+      </Item>
+    </AfterBurnerEffects>
+
+    <CollisionShapes>
+      <Boxes></Boxes>
+      <Capsules></Capsules>
+      <Spheres></Spheres>
+    </CollisionShapes>
+
+    <Wreckages>
+    </Wreckages>
+
+    <Mass>1000.0</Mass>
+    <Bounciness>0</Bounciness>
+    <Friction>0</Friction>
+    <Hardness>1</Hardness>
+    
+  </Asset>
+
+</XnaContent>

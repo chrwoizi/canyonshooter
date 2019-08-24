@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="DescriptionLibs.ParticleEffect.ParticleEffectDescription">
+	  <!--Specifies the EffectType to use and the assigned class.-->
+	  <EffectType>ROCKET_SMOKE</EffectType>
+	  <Settings>
+		  <TextureName>Content/Textures/Particles/RocketSmoke1</TextureName>
+		  <MaxParticles>500</MaxParticles>
+		  <!-- Particle's Duration in Seconds -->
+		  <Duration>1.5</Duration>
+		  <DurationRandomness>0</DurationRandomness>
+		  <EmitterVelocitySensitivity>1</EmitterVelocitySensitivity>
+		  <MinHorizontalVelocity>-1</MinHorizontalVelocity>
+		  <MaxHorizontalVelocity>-1</MaxHorizontalVelocity>
+		  <MinVerticalVelocity>-1</MinVerticalVelocity>
+		  <MaxVerticalVelocity>1</MaxVerticalVelocity>
+
+		  <Gravity>0 2 0</Gravity>
+		  <EndVelocity>0.75</EndVelocity>
+		  <MinColor>FFFFFFFF</MinColor>
+		  <MaxColor>FFFFFFFF</MaxColor>
+		  <MinRotateSpeed>-1</MinRotateSpeed>
+		  <MaxRotateSpeed>1</MaxRotateSpeed>
+		  <MinStartSize>5</MinStartSize>
+		  <MaxStartSize>10</MaxStartSize>
+		  <MinEndSize>15</MinEndSize>
+		  <MaxEndSize>20</MaxEndSize>
+		  <SourceBlend>SourceAlpha</SourceBlend>
+		  <DestinationBlend>InverseSourceAlpha</DestinationBlend>
+	  </Settings>
+	  
+  </Asset>
+</XnaContent>

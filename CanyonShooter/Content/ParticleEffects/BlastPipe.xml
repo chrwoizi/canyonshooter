@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="DescriptionLibs.ParticleEffect.ParticleEffectDescription">
+	  <!--Specifies the EffectType to use and the assigned class.-->
+	  <EffectType>BLASTPIPE</EffectType>
+	  <Settings>
+		  <TextureName>Content/Textures/Particles/BlastPipe1</TextureName>
+		  <MaxParticles>1000</MaxParticles>
+		  <!-- Particle's Duration in Seconds -->
+		  <Duration>0.5</Duration>
+		  <DurationRandomness>0</DurationRandomness>
+		  <EmitterVelocitySensitivity>1</EmitterVelocitySensitivity>
+		  <MinHorizontalVelocity>-1</MinHorizontalVelocity>
+		  <MaxHorizontalVelocity>-1</MaxHorizontalVelocity>
+		  <MinVerticalVelocity>-1</MinVerticalVelocity>
+		  <MaxVerticalVelocity>1</MaxVerticalVelocity>
+
+		  <Gravity>0 0 -50</Gravity>
+		  <EndVelocity>1</EndVelocity>
+		  <MinColor>FF6DD5FF</MinColor>
+		  <MaxColor>FF6DD5FF</MaxColor>
+		  <MinRotateSpeed>-1</MinRotateSpeed>
+		  <MaxRotateSpeed>1</MaxRotateSpeed>
+		  <MinStartSize>15</MinStartSize>
+		  <MaxStartSize>20</MaxStartSize>
+		  <MinEndSize>5</MinEndSize>
+		  <MaxEndSize>10</MaxEndSize>
+		  <SourceBlend>SourceAlpha</SourceBlend>
+		  <DestinationBlend>InverseSourceAlpha</DestinationBlend>
+	  </Settings>
+	  
+  </Asset>
+</XnaContent>

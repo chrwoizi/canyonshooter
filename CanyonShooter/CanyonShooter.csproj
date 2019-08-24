@@ -1,0 +1,517 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{06145CCE-E1AF-494D-89C5-2B317152D989}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CanyonShooter</RootNamespace>
+    <AssemblyName>Canyon Shooter</AssemblyName>
+    <XnaFrameworkVersion>v2.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>
+    </Thumbnail>
+    <XnaCrossPlatformGroupID>{86d58d53-5fa0-408f-8dce-582581ece8e9}</XnaCrossPlatformGroupID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TDx.TDxInput, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3bbf7d14b78dc9f5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\TDx.TDxInput.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arguments.cs" />
+    <Compile Include="Engine\Audio\ISoundSystem.cs">
+      <Name>ISoundManager</Name>
+    </Compile>
+    <Compile Include="Engine\Audio\MusicBoxStatus.cs" />
+    <Compile Include="Engine\Audio\SoundListener.cs" />
+    <Compile Include="Engine\Audio\SoundType.cs" />
+    <Compile Include="Engine\Config.cs" />
+    <Compile Include="Engine\GameStates.cs" />
+    <Compile Include="Engine\Graphics\PostProcessing\BloomAndRadialBlurPostProcess.cs" />
+    <Compile Include="Engine\Graphics\PostProcessing\RadialBlurPostProcess.cs" />
+    <Compile Include="Engine\NonLockingQueue.cs" />
+    <Compile Include="Engine\DrawOrderType.cs" />
+    <Compile Include="Engine\Graphics\Cameras\CameraBase.cs" />
+    <Compile Include="Engine\Graphics\Cameras\IOrthographicCamera.cs" />
+    <Compile Include="Engine\Graphics\Cameras\IPerspectiveCamera.cs" />
+    <Compile Include="Engine\Graphics\Cameras\PerspectiveCamera.cs">
+      <Name>Camera</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\Cameras\OrthographicCamera.cs" />
+    <Compile Include="Engine\Graphics\Cameras\FreePerspectiveCamera.cs" />
+    <Compile Include="Engine\Graphics\IScene.cs" />
+    <Compile Include="Engine\Graphics\IShaderConstantsSetter.cs" />
+    <Compile Include="Engine\Graphics\Lights\MovingPointLight.cs" />
+    <Compile Include="Engine\Graphics\PostProcessing\BloomPostProcess.cs" />
+    <Compile Include="Engine\Graphics\Models\StaticInstancingModel.cs" />
+    <Compile Include="Engine\Graphics\Geometry\HardwareInstancingModelMeshAdapterMesh.cs" />
+    <Compile Include="Engine\Graphics\Models\DynamicInstancingModel.cs" />
+    <Compile Include="Engine\Graphics\Effects\Effect.cs">
+      <Name>Effect</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\Effects\EffectFactory.cs">
+      <Name>EffectFactory</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\Effects\IEffect.cs">
+      <Name>IEffect</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\Effects\IEffectFactory.cs">
+      <Name>IEffectFactory</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\Effects\ParticleEmitter.cs" />
+    <Compile Include="Engine\Graphics\Effects\ParticleEmitter\BlastPipeEmitter.cs" />
+    <Compile Include="Engine\Graphics\Effects\ParticleSystem.cs" />
+    <Compile Include="Engine\Graphics\Effects\ParticleEmitter\ExplosionEmitter.cs" />
+    <Compile Include="Engine\Graphics\Effects\ParticleEmitter\LaserWallEmitter.cs" />
+    <Compile Include="Engine\Graphics\Effects\ParticleEmitter\RocketSmokeEmitter.cs" />
+    <Compile Include="Engine\Graphics\Effects\ParticleEmitter\SmokePlumeEmitter.cs" />
+    <Compile Include="Engine\Graphics\Effects\ParticleVertex.cs" />
+    <Compile Include="Engine\Graphics\Effects\Projectile.cs" />
+    <Compile Include="Engine\Graphics\Geometry\ConstantsInstancingModelMeshAdapterMesh.cs" />
+    <Compile Include="Engine\Graphics\Geometry\Mesh.cs" />
+    <Compile Include="Engine\Graphics\Graphics.cs" />
+    <Compile Include="Engine\Graphics\Cameras\ICamera.cs">
+      <Name>ICamera</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\IGraphics.cs" />
+    <Compile Include="Engine\Graphics\Lights\ILight.cs" />
+    <Compile Include="Engine\Graphics\Lights\IPointLight.cs" />
+    <Compile Include="Engine\Graphics\IMaterial.cs">
+      <Name>IMaterial</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\Geometry\IMesh.cs">
+      <Name>IMesh</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\Models\IModel.cs">
+      <Name>IModel</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\IRenderer.cs">
+      <Name>IRenderer</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\IShaderSelector.cs" />
+    <Compile Include="Engine\Graphics\Lights\ISunlight.cs" />
+    <Compile Include="Engine\Graphics\Lights\PointLight.cs" />
+    <Compile Include="Engine\Graphics\PostProcessing\IPostProcess.cs" />
+    <Compile Include="Engine\Graphics\RenderTarget2DAdapter.cs" />
+    <Compile Include="Engine\Graphics\Scene.cs" />
+    <Compile Include="Engine\Graphics\ShaderSelector.cs" />
+    <Compile Include="Engine\Graphics\Lights\Sunlight.cs" />
+    <Compile Include="Engine\Graphics\Geometry\VbIbAdapterMesh.cs">
+      <Name>VbIbAdapterMesh</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\Material.cs">
+      <Name>Material</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\Models\Model.cs">
+      <Name>Model</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\Geometry\ModelMeshAdapterMesh.cs">
+      <Name>ModelMeshAdapterMesh</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\ShadowMap.cs" />
+    <Compile Include="Engine\Graphics\WeaponSlot.cs" />
+    <Compile Include="Engine\Helper.cs" />
+    <Compile Include="Engine\Input\IInput.cs">
+      <Name>IInput</Name>
+    </Compile>
+    <Compile Include="Engine\Graphics\Renderer.cs">
+      <Name>Renderer</Name>
+    </Compile>
+    <Compile Include="Engine\Physics\Blast.cs" />
+    <Compile Include="Engine\Physics\CollisionActorEventHandler.cs" />
+    <Compile Include="Engine\IQueue.cs" />
+    <Compile Include="Engine\Physics\LessLockingPhysicsObject.cs" />
+    <Compile Include="Engine\Physics\NonLockingPhysicsObject.cs" />
+    <Compile Include="Engine\Physics\IPhysicsObject.cs" />
+    <Compile Include="Engine\Physics\QueueableCollisionEvent.cs" />
+    <Compile Include="Engine\Physics\ICollisionActor.cs" />
+    <Compile Include="Engine\Physics\IPhysics.cs">
+      <Name>IPhysics</Name>
+    </Compile>
+    <Compile Include="Engine\Physics\ITransformable.cs">
+      <Name>ITransformable</Name>
+    </Compile>
+    <Compile Include="Engine\Physics\Physics.cs">
+      <SubType>Code</SubType>
+      <Name>Physics</Name>
+    </Compile>
+    <Compile Include="Engine\Physics\LockingPhysicsObject.cs" />
+    <Compile Include="Engine\Physics\Transformable.cs">
+      <Name>Transformable</Name>
+    </Compile>
+    <Compile Include="Engine\LockingQueue.cs" />
+    <Compile Include="Engine\UpdateOrderType.cs" />
+    <Compile Include="Engine\AI\AIState.cs" />
+    <Compile Include="Engine\AI\AIStateMachine.cs" />
+    <Compile Include="Engine\AI\IAIState.cs" />
+    <Compile Include="GameClasses\Cheats.cs" />
+    <Compile Include="GameClasses\Console\Extern\GameConsoleFunction.cs" />
+    <Compile Include="GameClasses\Console\Extern\GameConsoleObject.cs" />
+    <Compile Include="GameClasses\Console\Extern\GameConsoleProperty.cs" />
+    <Compile Include="GameClasses\Console\Extern\IGameConsoleExternCommand.cs" />
+    <Compile Include="GameClasses\Console\GameConsole.cs" />
+    <Compile Include="GameClasses\Console\GameConsoleInfoAttribute.cs" />
+    <Compile Include="GameClasses\Console\GameConsoleTools.cs" />
+    <Compile Include="GameClasses\Console\GameConsoleTypeParser.cs" />
+    <Compile Include="GameClasses\Console\GraphicalConsole.cs" />
+    <Compile Include="GameClasses\Console\IGameConsole.cs" />
+    <Compile Include="GameClasses\Console\IGraphicalConsole.cs" />
+    <Compile Include="GameClasses\Console\Intern\GameConsoleCommandHelp.cs" />
+    <Compile Include="GameClasses\Console\Intern\GameConsoleCommandList.cs" />
+    <Compile Include="GameClasses\Console\Intern\GameConsoleCommandText.cs" />
+    <Compile Include="GameClasses\Console\Intern\IGameConsoleInternCommand.cs" />
+    <Compile Include="GameClasses\Credits\Credits.cs" />
+    <Compile Include="GameClasses\Finish.cs" />
+    <Compile Include="GameClasses\Intercom.cs" />
+    <Compile Include="GameClasses\Intro\Intro.cs" />
+    <Compile Include="GameClasses\Items\IItem.cs">
+      <Name>IItem</Name>
+    </Compile>
+    <Compile Include="GameClasses\ModelChooser\Chooser.cs" />
+    <Compile Include="GameClasses\Player\Crosshair.cs" />
+    <Compile Include="GameClasses\Player\Ghost.cs" />
+    <Compile Include="GameClasses\Player\Huds\Hud.cs" />
+    <Compile Include="GameClasses\Player\Huds\Hud3DControl.cs" />
+    <Compile Include="GameClasses\Player\Huds\HudBarControl.cs" />
+    <Compile Include="GameClasses\Player\Huds\HudControl.cs" />
+    <Compile Include="GameClasses\Player\Huds\HudSpriteControl.cs" />
+    <Compile Include="GameClasses\Player\Huds\HudTextControl.cs" />
+    <Compile Include="GameClasses\Player\Huds\IHud.cs" />
+    <Compile Include="GameClasses\Player\Huds\IHud3DControl.cs" />
+    <Compile Include="GameClasses\Player\Huds\IHudBarControl.cs" />
+    <Compile Include="GameClasses\Player\Huds\IHudControl.cs" />
+    <Compile Include="GameClasses\Player\Huds\IHudSpriteControl.cs" />
+    <Compile Include="GameClasses\Player\Huds\IHudTextControl.cs" />
+    <Compile Include="GameClasses\Player\IPlayer.cs">
+      <Name>IPlayer</Name>
+    </Compile>
+    <Compile Include="GameClasses\Player\Player2.cs" />
+    <Compile Include="GameClasses\AfterBurner.cs" />
+    <Compile Include="GameClasses\Scores\IHighscores.cs">
+      <Name>IHighscores</Name>
+    </Compile>
+    <Compile Include="GameClasses\Scores\IScore.cs">
+      <Name>IScore</Name>
+    </Compile>
+    <Compile Include="GameClasses\Scores\MockScore.cs" />
+    <Compile Include="GameClasses\Scores\OnlineScore.cs" />
+    <Compile Include="GameClasses\TrafficLight.cs" />
+    <Compile Include="GameClasses\Weapons\BaseWeapon.cs" />
+    <Compile Include="GameClasses\Weapons\Basic\BasicProjectile.cs" />
+    <Compile Include="GameClasses\Weapons\IWeapon.cs" />
+    <Compile Include="GameClasses\Weapons\PlasmaGun.cs" />
+    <Compile Include="GameClasses\Weapons\Projectiles\IWeaponProjectile.cs" />
+    <Compile Include="GameClasses\Weapons\Projectiles\MinigunProjectile.cs" />
+    <Compile Include="GameClasses\Weapons\Minigun.cs" />
+    <Compile Include="GameClasses\Weapons\Projectiles\PlasmaGunProjectile.cs" />
+    <Compile Include="GameClasses\Weapons\StingerRocket.cs" />
+    <Compile Include="GameClasses\Weapons\Projectiles\StingerRocketProjectile.cs" />
+    <Compile Include="GameClasses\Weapons\UltraPhaser.cs" />
+    <Compile Include="GameClasses\Weapons\Projectiles\UltraPhaserProjectile.cs" />
+    <Compile Include="GameClasses\Weapons\WeaponManager.cs" />
+    <Compile Include="GameClasses\World\Canyon\Canyon.cs" />
+    <Compile Include="GameClasses\World\Canyon\SegmentDescription.cs" />
+    <Compile Include="GameClasses\World\Canyon\Segment.cs">
+      <Name>Canyon</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\Canyon\Points.cs" />
+    <Compile Include="GameClasses\World\Canyon\ICanyon.cs">
+      <Name>ICanyon</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\Enemies\EnemyAI1.cs" />
+    <Compile Include="GameClasses\World\Enemies\EnemyAI2.cs" />
+    <Compile Include="GameClasses\World\Enemies\EnemyFormation.cs" />
+    <Compile Include="GameClasses\World\Enemies\KamidroneAI.cs" />
+    <Compile Include="GameClasses\World\Enemies\StatesTowerAI\TowerAIAttackPlayer.cs" />
+    <Compile Include="GameClasses\World\Enemies\StatesTowerAI\TowerAIObserving.cs" />
+    <Compile Include="GameClasses\World\Enemies\TowerAI.cs" />
+    <Compile Include="GameClasses\World\Enemies\StatesAI2\AI2AttackPlayer.cs" />
+    <Compile Include="GameClasses\World\Enemies\StatesAI2\AI2FlyToPlayer.cs" />
+    <Compile Include="GameClasses\World\Enemies\StatesAI2\AI2FlyToWaypoint.cs" />
+    <Compile Include="GameClasses\World\Enemies\StatesAI2\AI2Patrol.cs" />
+    <Compile Include="GameClasses\World\Enemies\StatesAI2\AI2FlyInFormation.cs" />
+    <Compile Include="GameClasses\World\Enemies\StatesKamidroneAI\Patrol.cs" />
+    <Compile Include="GameClasses\World\Enemies\StatesKamidroneAI\FlyInFormation.cs" />
+    <Compile Include="GameClasses\World\Enemies\StatesKamidroneAI\FlyToWaypoint.cs" />
+    <Compile Include="GameClasses\World\Enemies\StatesKamidroneAI\FlyToPlayer.cs" />
+    <Compile Include="GameClasses\World\Enemies\TankAI.cs" />
+    <Compile Include="GameClasses\World\Enemies\WaypointManager.cs" />
+    <Compile Include="GameClasses\World\WaypointObject.cs" />
+    <Compile Include="GameClasses\World\StaticObject.cs" />
+    <Compile Include="GameClasses\World\Statics.cs" />
+    <Compile Include="GameClasses\World\Debris\DebrisEmitter.cs" />
+    <Compile Include="GameClasses\World\Debris\DebrisEmitterTypeVolumeSphere.cs" />
+    <Compile Include="GameClasses\World\Debris\DebrisEmitterTypeVolumeOOBB.cs" />
+    <Compile Include="GameClasses\World\Debris\DebrisEmitterTypeDirectional.cs" />
+    <Compile Include="GameClasses\World\Debris\DebrisEmitterTypeCone.cs" />
+    <Compile Include="GameClasses\World\Debris\DebrisEmitterTypeSphere.cs" />
+    <Compile Include="GameClasses\World\Debris\IDebrisEmitterType.cs" />
+    <Compile Include="GameClasses\World\Enemies\EnemyAI2Flo.cs">
+      <Name>Enemy</Name>
+    </Compile>
+    <Compile Include="GameClasses\Scores\Highscores.cs">
+      <Name>Highscores</Name>
+    </Compile>
+    <Compile Include="GameClasses\Items\Item.cs">
+      <Name>Item</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\Enemies\IEnemy.cs">
+      <Name>IEnemy</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\GameObject.cs">
+      <Name>GameObject</Name>
+    </Compile>
+    <Compile Include="GameClasses\Player\Player.cs">
+      <Name>Player</Name>
+    </Compile>
+    <Compile Include="Engine\Input\Input.cs">
+      <Name>Input</Name>
+    </Compile>
+    <Compile Include="GameClasses\Scores\Score.cs">
+      <Name>Score</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\Debris\IDebrisEmitter.cs" />
+    <Compile Include="GameClasses\World\IGameObject.cs">
+      <Name>IGameObject</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\ISky.cs">
+      <Name>ISky</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\IStatic.cs">
+      <Name>IStatic</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\IWorld.cs">
+      <Name>IWorld</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\Static.cs">
+      <Name>Static</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\StaticsFactory.cs" />
+    <Compile Include="GameClasses\World\SunlightObject.cs" />
+    <Compile Include="GameClasses\World\Wreckage.cs" />
+    <Compile Include="ICanyonShooterGame.cs">
+      <Name>ICanyonShooterGame</Name>
+    </Compile>
+    <Compile Include="Engine\Audio\ISound.cs" />
+    <Compile Include="Menus\Bar.cs" />
+    <Compile Include="Menus\Button.cs">
+      <Name>Button</Name>
+    </Compile>
+    <Compile Include="Menus\ButtonList.cs">
+      <Name>ButtonList</Name>
+    </Compile>
+    <Compile Include="Menus\Dialog.cs" />
+    <Compile Include="Menus\HighscoreList.cs" />
+    <Compile Include="Menus\HighscoreSupporter.cs" />
+    <Compile Include="Menus\HSlideBar.cs" />
+    <Compile Include="Menus\IMainList.cs" />
+    <Compile Include="Menus\IOptionSetting.cs" />
+    <Compile Include="Menus\LevelChooser.cs" />
+    <Compile Include="Menus\MainList.cs" />
+    <Compile Include="Menus\Listbox.cs" />
+    <Compile Include="Menus\NormalList.cs" />
+    <Compile Include="Menus\OptionList.cs" />
+    <Compile Include="Menus\OptionModulationButton.cs" />
+    <Compile Include="Menus\PromptCollection.cs" />
+    <Compile Include="Menus\Scrollbar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Profils\Button.cs" />
+    <Compile Include="Profils\ButtonList.cs" />
+    <Compile Include="Profils\IProfil.cs" />
+    <Compile Include="Profils\ProfilControl.cs" />
+    <Compile Include="Profils\Profil.cs" />
+    <Compile Include="Menus\HighscoreMenu.cs">
+      <Name>HighscoreMenu</Name>
+    </Compile>
+    <Compile Include="Menus\IMenu.cs">
+      <Name>IMenu</Name>
+    </Compile>
+    <Compile Include="Menus\Menu.cs">
+      <Name>Menu</Name>
+    </Compile>
+    <Compile Include="Menus\MenuControl.cs" />
+    <Compile Include="Menus\Option.cs" />
+    <Compile Include="Menus\Prompt.cs" />
+    <Compile Include="Profils\ProfilProperties.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs">
+      <Name>Program</Name>
+    </Compile>
+    <Compile Include="CanyonShooterGame.cs">
+      <Name>CanyonShooterGame</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\Sky.cs">
+      <Name>Sky</Name>
+    </Compile>
+    <Compile Include="Engine\Audio\SoundSystem.cs">
+      <Name>SoundManager</Name>
+    </Compile>
+    <Compile Include="GameClasses\World\World.cs">
+      <Name>World</Name>
+    </Compile>
+    <Compile Include="Engine\Audio\Sound.cs" />
+    <Compile Include="Splash.cs" />
+    <Compile Include="Tests\TestAudio3D.cs" />
+    <Compile Include="Tests\TestAudio3DEmitter.cs" />
+    <Compile Include="Tests\TestAudioPlayback.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dokumente\Team\Aufgabenverteilung nach Person.txt">
+      <Name>Aufgabenverteilung nach Person</Name>
+    </Content>
+    <Content Include="Game.ico">
+      <Name>Game</Name>
+    </Content>
+    <Content Include="GameClasses\Scores\Highscore.xml" />
+    <Content Include="Profils\Profil1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Profils\Profil2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Profils\Profil3.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Profils\Profil4.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Profils\Profil5.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Content.contentproj">
+      <Project>{73c39693-8f57-4da4-b6ea-1ffbc952abd7}</Project>
+      <Visible>False</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{1911B76B-0AF5-40A0-902A-C3F0D0291702}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DescriptionLibs\DescriptionLibs.csproj">
+      <Project>{E37A0763-9424-430A-AE5E-B9D3FE2CB31C}</Project>
+      <Name>DescriptionLibs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XnaDevRu.Physics.Ode\XnaDevRu.Physics.Ode.csproj">
+      <Project>{18197851-A07B-4F60-B764-FC40AC7011C4}</Project>
+      <Name>XnaDevRu.Physics.Ode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XnaDevRu.Physics\XnaDevRu.Physics.csproj">
+      <Project>{E333B389-4A1F-430E-8964-E1E26B541952}</Project>
+      <Name>XnaDevRu.Physics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Engine\Audio\Audio.cd" />
+    <None Include="GameClasses\World\Levels\Level1.csl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GameClasses\World\Levels\Level2.csl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GameClasses\World\Levels\Level3.csl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GameClasses\World\Levels\Sascha.csl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GameClasses\World\Levels\test.csl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GameClasses\World\Levels\The Corkscrew.csl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GameClasses\World\Levels\The Hell of Tunnels.csl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GameClasses\World\Levels\The Race.csl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GameClasses\World\Levels\The Way goes Up and Down.csl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GameClasses\World\Levels\TowerTestCave.csl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GameClasses\World\Levels\WaypointTestLevel.csl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SpeechLib">
+      <Guid>{C866CA3A-32F7-11D2-9602-00C04F8EE628}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="TDxInput">
+      <Guid>{7858B9E0-5793-4BE4-9B53-661D922790D2}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dokumente\Dokumentation\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.Common.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.NestedContent.targets" />
+</Project>

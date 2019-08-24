@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+  <Asset Type="DescriptionLibs.Model.ModelDescription">
+
+    <BaseFBX>F35eger</BaseFBX>
+    <BaseRotationAngle>0</BaseRotationAngle>
+    <BaseRotationAxis>1 0 0</BaseRotationAxis>
+
+    <RandomRotationConstraints>
+      <X>
+        <Min>0</Min>
+        <Max>0</Max>
+      </X>
+      <Y>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Y>
+      <Z>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Z>
+    </RandomRotationConstraints>
+
+    <Animations>
+    </Animations>
+
+    <Materials>
+      <Item>
+        <MeshName>*</MeshName>
+        <MaterialName>F35eger</MaterialName>
+      </Item>
+    </Materials>
+
+    <Weapons>
+      <Item>
+        <WeaponType>MINIGUN2</WeaponType>
+        <Position>5.0 -1.8 0.0</Position>
+        <RotationAxis>0 0 0</RotationAxis>
+        <RotationAngle>0.0</RotationAngle>
+        <Scaling>1 1 1</Scaling>
+      </Item>
+      <Item>
+        <WeaponType>MINIGUN</WeaponType>
+        <Position>-5.0 -1.8 0.0</Position>
+        <RotationAxis>0 0 0</RotationAxis>
+        <RotationAngle>0.0</RotationAngle>
+        <Scaling>1 1 1</Scaling>
+      </Item>
+    </Weapons>
+    
+	  <ParticleEffects>
+	  </ParticleEffects>
+
+    <AfterBurnerEffects>
+      <Item>
+        <Position>0.75 -0.5 7</Position>
+        <RotationAxis>0 1 0</RotationAxis>
+        <RotationAngle>0</RotationAngle>
+        <Scaling>2.5 1.5 10</Scaling>
+      </Item>
+      <Item>
+        <Position>-0.7 -0.5 7</Position>
+        <RotationAxis>0 1 0</RotationAxis>
+        <RotationAngle>0</RotationAngle>
+        <Scaling>2.5 1.5 10</Scaling>
+      </Item>
+    </AfterBurnerEffects>
+
+    <CollisionShapes>
+      <Boxes>
+        <Item>
+          <Size>5 1.3 4</Size>
+          <OffsetPosition>0 0 9</OffsetPosition>
+          <OffsetRotationAxis>1 0 0</OffsetRotationAxis>
+          <OffsetRotationAngle>0</OffsetRotationAngle>
+        </Item>
+        <Item>
+          <Size>3 1.3 4</Size>
+          <OffsetPosition>0 0 -9</OffsetPosition>
+          <OffsetRotationAxis>1 0 0</OffsetRotationAxis>
+          <OffsetRotationAngle>0</OffsetRotationAngle>
+        </Item>
+        <Item>
+          <Size>5 1 4</Size>
+          <OffsetPosition>-5 -1 0</OffsetPosition>
+          <OffsetRotationAxis>1 0 0</OffsetRotationAxis>
+          <OffsetRotationAngle>0</OffsetRotationAngle>
+        </Item>
+        <Item>
+          <Size>5 1 4</Size>
+          <OffsetPosition>5 -1 0</OffsetPosition>
+          <OffsetRotationAxis>1 0 0</OffsetRotationAxis>
+          <OffsetRotationAngle>0</OffsetRotationAngle>
+        </Item>
+        <Item>
+          <Size>7 3.2 14</Size>
+          <OffsetPosition>0 0 0</OffsetPosition>
+          <OffsetRotationAxis>1 0 0</OffsetRotationAxis>
+          <OffsetRotationAngle>0</OffsetRotationAngle>
+        </Item>
+      </Boxes>
+      <Capsules></Capsules>
+      <Spheres></Spheres>
+    </CollisionShapes>
+
+    <Wreckages>
+      <Item>
+        <Model>F35egerDestructionPart1</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>F35egerDestructionPart2</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>F35egerDestructionPart3</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>F35egerDestructionPart3</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>F35egerDestructionPart4</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>F35egerDestructionPart5</Model>
+        <Position>0 0 0</Position>
+      </Item>
+    </Wreckages>
+
+    <Mass>1000.0</Mass>
+    <Bounciness>0</Bounciness>
+    <Friction>0</Friction>
+    <Hardness>1</Hardness>
+    
+  </Asset>
+
+</XnaContent>

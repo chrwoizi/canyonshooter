@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+	<Asset Type="DescriptionLibs.EnemyType.EnemyTypeDescription">
+
+		<Model>Tank</Model>
+		<MaxHitpoints>100</MaxHitpoints>
+		<Speed>250.0</Speed>
+		<Path>0 0 0</Path>
+		<Weapons>
+			<Item>ULTRA_PHASER</Item>
+		</Weapons>
+		<Formation></Formation>
+		<ScorePoints>200</ScorePoints>
+	</Asset>
+
+</XnaContent>

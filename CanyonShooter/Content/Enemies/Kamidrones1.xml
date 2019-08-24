@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+	<Asset Type="DescriptionLibs.EnemyType.EnemyTypeDescription">
+
+		<Model>Kamidrone</Model>
+		<MaxHitpoints>50</MaxHitpoints>
+		<Speed>200.0</Speed>
+		<Path>0 0 0</Path>
+		<Weapons>
+		</Weapons>
+		<Formation>0 0 0 0 0 -60 0 0 -120</Formation>
+		<ScorePoints>200</ScorePoints>
+	</Asset>
+
+</XnaContent>

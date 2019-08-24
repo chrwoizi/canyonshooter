@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+	
+	<Asset Type="DescriptionLibs.Intro.IntroDescription">
+
+    <Zeile>
+          <Item>
+            <Text>Fast, faster, Canyonball...Each year,</Text>
+            <Y>2000</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>there is the great Canyonrace on Aldera,</Text>
+            <Y>2000</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>to determine the best of the best. For</Text>
+            <Y>2000</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>100 years, since gliders were invented,</Text>
+            <Y>2000</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>the participants are coming from all </Text>
+            <Y>2000</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>parts of the galaxy. Challenging flights</Text>
+            <Y>2000</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>through the canyon which are demanding </Text>
+            <Y>875</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>everything from the pilots. Not only the </Text>
+            <Y>920</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>narrow curves but also the enemies make </Text>
+            <Y>965</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>this into a struggle for survival, which </Text>
+            <Y>1010</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>not everyone can win. It is extremely tough</Text>
+            <Y>1055</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>and each one has to test their limit.</Text>
+            <Y>1100</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text></Text>
+            <Y>1145</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>You are one of those pilots... </Text>
+            <Y>1190</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>Do you have it in you?</Text>
+            <Y>1235</Y>
+            <Scale>2</Scale>
+          </Item>
+          <Item>
+            <Text>Then show your skills and get the title!</Text>
+            <Y>1280</Y>
+            <Scale>2</Scale>
+          </Item>
+        </Zeile>
+
+  </Asset>
+
+</XnaContent>

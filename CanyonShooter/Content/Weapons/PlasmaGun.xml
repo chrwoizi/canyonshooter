@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+	<Asset Type="DescriptionLibs.Weapon.WeaponDescription">
+
+		<Model></Model>
+		<Icon>Content/Textures/Hud/plasmagunIcon</Icon>
+		<Damage>500</Damage>
+		<ProjectileSpeed>100.0</ProjectileSpeed>
+		<FirePause>25</FirePause>
+		<LoopedFire>false</LoopedFire>
+		<AmmoType>PLASMABALLS</AmmoType>
+		<AmmoReloadCount>4</AmmoReloadCount>
+		<DefaultAmmo>99999</DefaultAmmo>
+		<AmmoPerShoot>1</AmmoPerShoot>
+		<AutoReload>true</AutoReload>
+		<ProjectileOffset>1 1 -6</ProjectileOffset>
+		<SoundFiring></SoundFiring>
+		<SoundAmmoEmpty>Ammo</SoundAmmoEmpty>
+		<SoundAmmoEmptyMilliseconds>1000</SoundAmmoEmptyMilliseconds>
+		<SoundReload></SoundReload>
+		<SoundReloadMilliseconds>1000</SoundReloadMilliseconds>
+		<SoundStartFire></SoundStartFire>
+		<SoundStartMilliseconds>0</SoundStartMilliseconds>
+		<SoundStopFire></SoundStopFire>
+		<SoundStopMilliseconds>0</SoundStopMilliseconds>
+		<CrossHair>Content/Textures/Hud/fadenkreuzKreiseGruen</CrossHair>
+		<CrossHairFiring>Content/Textures/Hud/fadenkreuzKreiseRot</CrossHairFiring>
+		<CrossHairReloading>Content/Textures/Hud/fadenkreuzKreiseGelb</CrossHairReloading>
+	</Asset>
+
+</XnaContent>

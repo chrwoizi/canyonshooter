@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+  <Asset Type="DescriptionLibs.Model.ModelDescription">
+
+    <BaseFBX>Fighter</BaseFBX>
+    <BaseRotationAngle>0</BaseRotationAngle>
+    <BaseRotationAxis>1 0 0</BaseRotationAxis>
+
+    <RandomRotationConstraints>
+      <X>
+        <Min>0</Min>
+        <Max>0</Max>
+      </X>
+      <Y>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Y>
+      <Z>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Z>
+    </RandomRotationConstraints>
+
+    <Animations>
+    </Animations>
+
+    <Materials>
+      <Item>
+        <MeshName>*</MeshName>
+        <MaterialName>Fighter</MaterialName>
+      </Item>
+    </Materials>
+
+    <Weapons>
+      <Item>
+        <WeaponType>MINIGUN2</WeaponType>
+        <Position>4.0 -1.7 5.5</Position>
+        <RotationAxis>0 0 0</RotationAxis>
+        <RotationAngle>0.0</RotationAngle>
+        <Scaling>0.8 0.8 0.8</Scaling>
+      </Item>
+      <Item>
+        <WeaponType>MINIGUN</WeaponType>
+        <Position>-4.0 -1.7 5.5</Position>
+        <RotationAxis>0 0 0</RotationAxis>
+        <RotationAngle>0.0</RotationAngle>
+        <Scaling>0.8 0.8 0.8</Scaling>
+      </Item>
+    </Weapons>
+    
+	  <ParticleEffects>
+	  </ParticleEffects>
+
+    <AfterBurnerEffects>
+      <Item>
+        <Position>0.01 0 9.3</Position>
+        <RotationAxis>0 1 0</RotationAxis>
+        <RotationAngle>0</RotationAngle>
+        <Scaling>2.9 2 10</Scaling>
+      </Item>
+    </AfterBurnerEffects>
+
+    <CollisionShapes>
+      <Boxes>
+        <Item>
+          <Size>2 2 7</Size>
+          <OffsetPosition>0 2 5.5</OffsetPosition>
+          <OffsetRotationAxis>1 0 0</OffsetRotationAxis>
+          <OffsetRotationAngle>0</OffsetRotationAngle>
+        </Item>
+        <Item>
+          <Size>14 2 7</Size>
+          <OffsetPosition>0 0 5.5</OffsetPosition>
+          <OffsetRotationAxis>1 0 0</OffsetRotationAxis>
+          <OffsetRotationAngle>0</OffsetRotationAngle>
+        </Item>
+        <Item>
+          <Size>4 4 12</Size>
+          <OffsetPosition>0 0.5 -4</OffsetPosition>
+          <OffsetRotationAxis>1 0 0</OffsetRotationAxis>
+          <OffsetRotationAngle>0</OffsetRotationAngle>
+        </Item>
+      </Boxes>
+      <Capsules></Capsules>
+      <Spheres></Spheres>
+    </CollisionShapes>
+
+    <Wreckages>
+      <Item>
+        <Model>FighterDestructionPart1</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>FighterDestructionPart2</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>FighterDestructionPart3</Model>
+        <Position>0 0 0</Position>
+      </Item>
+      <Item>
+        <Model>FighterDestructionPart4</Model>
+        <Position>0 0 0</Position>
+      </Item>
+    </Wreckages>
+
+    <Mass>1000.0</Mass>
+    <Bounciness>0</Bounciness>
+    <Friction>0</Friction>
+    <Hardness>1</Hardness>
+    
+  </Asset>
+
+</XnaContent>

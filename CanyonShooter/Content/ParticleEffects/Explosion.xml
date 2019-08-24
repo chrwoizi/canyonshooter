@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="DescriptionLibs.ParticleEffect.ParticleEffectDescription">
+	  <!--Specifies the EffectType to use and the assigned class.-->
+	  <EffectType>EXPLOSION</EffectType>
+	  <Settings>
+		  <TextureName>Content/Textures/Particles/explosion3</TextureName>
+		  <MaxParticles>30</MaxParticles>
+		  <!-- Particle's Duration in Seconds -->
+		  <Duration>2</Duration>
+		  <DurationRandomness>1</DurationRandomness>
+		  <EmitterVelocitySensitivity>1</EmitterVelocitySensitivity>
+		  <MinHorizontalVelocity>3.5</MinHorizontalVelocity>
+		  <MaxHorizontalVelocity>4</MaxHorizontalVelocity>
+		  <MinVerticalVelocity>-5</MinVerticalVelocity>
+		  <MaxVerticalVelocity>5</MaxVerticalVelocity>
+
+		  <Gravity>0 0 -3</Gravity>
+		  <EndVelocity>6</EndVelocity>
+		  <MinColor>FFFFFF66</MinColor>
+		  <MaxColor>FFFFFFFF</MaxColor>
+		  <MinRotateSpeed>-1</MinRotateSpeed>
+		  <MaxRotateSpeed>1</MaxRotateSpeed>
+		  <MinStartSize>10</MinStartSize>
+		  <MaxStartSize>20</MaxStartSize>
+		  <MinEndSize>50</MinEndSize>
+		  <MaxEndSize>100</MaxEndSize>
+		  <SourceBlend>SourceAlpha</SourceBlend>
+		  <DestinationBlend>InverseSourceAlpha</DestinationBlend>
+	  </Settings>
+	  
+  </Asset>
+</XnaContent>

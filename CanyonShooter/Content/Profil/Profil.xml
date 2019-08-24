@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+  <Asset Type="DescriptionLibs.Profil.ProfilDescription">
+
+    <BackgroundImage>Profile</BackgroundImage>
+    <Marker>Marker</Marker>
+    <Textback>ProfilTextBack</Textback>
+    <TextbackRec>30 70 250 400</TextbackRec>
+    <buttonBackground>menu_bg</buttonBackground>
+    <ButtonBackRec>430 10 332 130</ButtonBackRec>
+    <barCreate>barProfilCreate</barCreate>
+    <barRec>442 20 308 20</barRec>
+    <barDelete>barProfilDelete</barDelete>
+    <barOk>barProfilReady</barOk>
+    <TextFieldImage>ProfilText</TextFieldImage>
+    <TextFieldRectangle>200 200 300 150</TextFieldRectangle>
+    <Mouse>zeiger</Mouse>
+    <Buttons>
+      <Item>
+        <ButtonName>Erstellen</ButtonName>
+        <ButtonImage>butBuild</ButtonImage>
+        <ButtonRectangle>460 54 72 72</ButtonRectangle>
+      </Item>
+      <Item>
+        <ButtonName>Löschen</ButtonName>
+        <ButtonImage>butDel</ButtonImage>
+        <ButtonRectangle>560 54 72 72</ButtonRectangle>
+      </Item>
+      <Item>
+        <ButtonName>Ok</ButtonName>
+        <ButtonImage>butstart</ButtonImage>
+        <ButtonRectangle>660 54 72 72</ButtonRectangle>
+      </Item>
+    </Buttons>
+
+  </Asset>
+
+</XnaContent>

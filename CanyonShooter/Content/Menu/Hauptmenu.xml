@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+	
+	<Asset Type="DescriptionLibs.Menu.MenuDescription">
+		
+		<MenuParts>
+			<Item>
+				<Name>Hauptmenu</Name>
+				<DisplayName>Hauptmenü</DisplayName>
+				<BackgroundImage>Entry</BackgroundImage>
+				<Mouse>zeiger</Mouse>
+        <MenuBackground>menu_bg</MenuBackground>
+        <MenuPosition>402 29 378 130</MenuPosition>
+        <StartPosition>453 73</StartPosition>
+        <Spacer>28 0</Spacer>
+        <ShiftOffset>10 0</ShiftOffset>
+        <ButtonCount>3</ButtonCount>
+        <Buttons>
+          <Item>
+            <ButtonName>Starten</ButtonName>
+            <ButtonImage>butstart</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barMainPlay</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Gleiterwahl</ButtonName>
+            <ButtonImage>butGleit</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barMainGleiter</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Highscore</ButtonName>
+            <ButtonImage>butScore</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barMainHighscore</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Optionen</ButtonName>
+            <ButtonImage>butopt</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barMainOptions</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Beenden</ButtonName>
+            <ButtonImage>butbeend</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barMainExit</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+        </Buttons>
+      </Item>
+      <Item>
+        <Name>Optionen</Name>
+        <DisplayName>Optionen</DisplayName>
+        <BackgroundImage>optionen</BackgroundImage>
+        <Mouse>zeiger</Mouse>
+        <MenuBackground>menu_bg</MenuBackground>
+        <MenuPosition>402 29 378 130</MenuPosition>
+        <StartPosition>453 73</StartPosition>
+        <Spacer>0 40</Spacer>
+        <ShiftOffset>10 0</ShiftOffset>
+        <ButtonCount>3</ButtonCount>
+        <Buttons>
+           <Item>
+             <ButtonName>Profil</ButtonName>
+             <ButtonImage>butProfil</ButtonImage>
+             <height>72</height>
+             <width>72</width>
+             <BarName>barOptionProfil</BarName>
+             <BarPosition>416 39 350 20</BarPosition>
+           </Item>
+           <Item>
+             <ButtonName>Spielereinstellungen</ButtonName>
+             <ButtonImage>butPlayerConfig</ButtonImage>
+             <height>72</height>
+             <width>72</width>
+             <BarName>barOptionPlayerConfig</BarName>
+             <BarPosition>416 39 350 20</BarPosition>
+           </Item>
+           <Item>
+            <ButtonName>Grafik</ButtonName>
+            <ButtonImage>butGraphic</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barOptionGraphic</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Sound</ButtonName>
+            <ButtonImage>butSound</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barOptionSound</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Steuerung</ButtonName>
+            <ButtonImage>butControl</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barOptionControl</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Zurück</ButtonName>
+            <ButtonImage>butBack</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barOptionBack</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>          
+        </Buttons>
+      </Item>
+      <Item>
+        <Name>Highscore</Name>
+        <DisplayName>Highscore</DisplayName>
+        <BackgroundImage>optionen</BackgroundImage>
+        <Mouse>zeiger</Mouse>
+        <MenuBackground>menu_bg</MenuBackground>
+        <MenuPosition>402 29 378 130</MenuPosition>
+        <StartPosition>453 73</StartPosition>
+        <Spacer>134 0</Spacer>
+        <ShiftOffset>10 0</ShiftOffset>
+        <ButtonCount>3</ButtonCount>
+        <Buttons>
+          <Item>
+            <ButtonName>Amateur</ButtonName>
+            <ButtonImage>butEasy</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barHighscoreEasy</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Profi</ButtonName>
+            <ButtonImage>butNormal</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barHighscoreNormal</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Elite</ButtonName>
+            <ButtonImage>butHeavy</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barHighscoreHeavy</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>ResetAll</ButtonName>
+            <ButtonImage>butReset</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barHighscoreReset</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Zurück</ButtonName>
+            <ButtonImage>butBack</ButtonImage>
+            <height>72</height>
+            <width>72</width>
+            <BarName>barHighscoreBack</BarName>
+            <BarPosition>416 39 350 20</BarPosition>
+          </Item>
+        </Buttons>
+      </Item>
+      <Item>
+        <Name>Score</Name>
+        <DisplayName>Listbox</DisplayName>
+        <BackgroundImage>optionen</BackgroundImage>
+        <Mouse>zeiger</Mouse>
+        <MenuBackground>menu_bg</MenuBackground>
+        <MenuPosition>350 25 0 0</MenuPosition>
+        <StartPosition>350 536</StartPosition>
+        <Spacer>134 0</Spacer>
+        <ShiftOffset>0 0</ShiftOffset>
+        <ButtonCount>2</ButtonCount>
+        <Buttons>
+          <Item>
+            <ButtonName>Löschen</ButtonName>
+            <ButtonImage>listboxzurück</ButtonImage>
+            <height>30</height>
+            <width>133</width>
+            <BarName> </BarName>
+            <BarPosition>0 0 0 0</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Akzeptieren</ButtonName>
+            <ButtonImage>listboxok</ButtonImage>
+            <height>30</height>
+            <width>133</width>
+            <BarName> </BarName>
+            <BarPosition>0 0 0 0</BarPosition>
+          </Item>
+        </Buttons>
+      </Item>
+      <Item>
+        <Name>OptionList</Name>
+        <DisplayName>Listbox</DisplayName>
+        <BackgroundImage>optionen</BackgroundImage>
+        <Mouse>zeiger</Mouse>
+        <MenuBackground>menu_bg</MenuBackground>
+        <MenuPosition>350 25 0 0</MenuPosition>
+        <StartPosition>350 536</StartPosition>
+        <Spacer>1 0</Spacer>
+        <ShiftOffset>0 0</ShiftOffset>
+        <ButtonCount>2</ButtonCount>
+        <Buttons>
+          <Item>
+            <ButtonName>Ablehnen</ButtonName>
+            <ButtonImage>listboxCancel</ButtonImage>
+            <height>30</height>
+            <width>133</width>
+            <BarName> </BarName>
+            <BarPosition>0 0 0 0</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Reset</ButtonName>
+            <ButtonImage>listboxReset</ButtonImage>
+            <height>30</height>
+            <width>132</width>
+            <BarName> </BarName>
+            <BarPosition>0 0 0 0</BarPosition>
+          </Item>
+          <Item>
+            <ButtonName>Akzeptieren</ButtonName>
+            <ButtonImage>listboxok</ButtonImage>
+            <height>30</height>
+            <width>133</width>
+            <BarName> </BarName>
+            <BarPosition>0 0 0 0</BarPosition>
+          </Item>
+        </Buttons>
+      </Item>
+    </MenuParts>
+
+  </Asset>
+
+</XnaContent>

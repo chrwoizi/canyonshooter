@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+  <Asset Type="DescriptionLibs.Model.ModelDescription">
+
+    <BaseFBX>StarfighterDestructionPart1</BaseFBX>
+    <BaseRotationAngle>0</BaseRotationAngle>
+    <BaseRotationAxis>1 0 0</BaseRotationAxis>
+
+    <RandomRotationConstraints>
+      <X>
+        <Min>0</Min>
+        <Max>0</Max>
+      </X>
+      <Y>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Y>
+      <Z>
+        <Min>0</Min>
+        <Max>0</Max>
+      </Z>
+    </RandomRotationConstraints>
+    
+    <Animations>
+    </Animations>
+
+    <Materials>
+      <Item>
+        <MeshName>*</MeshName>
+        <MaterialName>Starfighter</MaterialName>
+      </Item>
+    </Materials>
+
+    <Weapons>
+    </Weapons>
+    
+	  <ParticleEffects>
+	  </ParticleEffects>
+
+    <AfterBurnerEffects>
+    </AfterBurnerEffects>
+
+    <CollisionShapes>
+      <Boxes>
+        <Item>
+          <Size>0.7 2.8 14</Size>
+          <OffsetPosition>4.8 -3 0</OffsetPosition>
+          <OffsetRotationAxis>0 0 1</OffsetRotationAxis>
+          <OffsetRotationAngle>-0.7</OffsetRotationAngle>
+        </Item>
+        <Item>
+          <Size>0.7 2.8 14</Size>
+          <OffsetPosition>-4.8 -3 0</OffsetPosition>
+          <OffsetRotationAxis>0 0 1</OffsetRotationAxis>
+          <OffsetRotationAngle>0.7</OffsetRotationAngle>
+        </Item>
+      </Boxes>
+      <Capsules></Capsules>
+      <Spheres>
+      </Spheres>
+    </CollisionShapes>
+
+    <Wreckages>
+    </Wreckages>
+
+    <Mass>1000.0</Mass>
+    <Bounciness>0</Bounciness>
+    <Friction>0</Friction>
+    <Hardness>1</Hardness>
+    
+  </Asset>
+
+</XnaContent>

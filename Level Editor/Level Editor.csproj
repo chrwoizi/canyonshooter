@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{720C5812-13F4-4B2B-90BC-3A070EBC1DEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CanyonShooter.Editor</RootNamespace>
+    <AssemblyName>CanyonShooter.Editor</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Compile Include="CanyonGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CanyonGenerator.Designer.cs">
+      <DependentUpon>CanyonGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CanyonOutline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CanyonOutline.Designer.cs">
+      <DependentUpon>CanyonOutline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CanyonShape.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CanyonShape.Designer.cs">
+      <DependentUpon>CanyonShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CanyonTracker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CanyonTracker.Designer.cs">
+      <DependentUpon>CanyonTracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PanelD.designer.cs">
+      <DependentUpon>PanelD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CanyonGenerator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CanyonGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CanyonOutline.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CanyonOutline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CanyonShape.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CanyonShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CanyonTracker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CanyonTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CanyonShooter\CanyonShooter.csproj">
+      <Project>{06145CCE-E1AF-494D-89C5-2B317152D989}</Project>
+      <Name>CanyonShooter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{1911B76B-0AF5-40A0-902A-C3F0D0291702}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DescriptionLibs\DescriptionLibs.csproj">
+      <Project>{E37A0763-9424-430A-AE5E-B9D3FE2CB31C}</Project>
+      <Name>DescriptionLibs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XnaDevRu.Physics.Ode\XnaDevRu.Physics.Ode.csproj">
+      <Project>{18197851-A07B-4F60-B764-FC40AC7011C4}</Project>
+      <Name>XnaDevRu.Physics.Ode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XnaDevRu.Physics\XnaDevRu.Physics.csproj">
+      <Project>{E333B389-4A1F-430E-8964-E1E26B541952}</Project>
+      <Name>XnaDevRu.Physics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RunIcon.png" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="DescriptionLibs.ParticleEffect.ParticleEffectDescription">
+	  <!--Specifies the EffectType to use and the assigned class.-->
+	  <EffectType>SMOKE_PLUME</EffectType>
+	  <Settings>
+		  <TextureName>Content/Textures/Particles/smoke</TextureName>
+		  <MaxParticles>1000</MaxParticles>
+		  <!-- Particle's Duration in Seconds -->
+		  <Duration>10.0</Duration>
+		  <DurationRandomness>0</DurationRandomness>
+		  <EmitterVelocitySensitivity>1</EmitterVelocitySensitivity>
+		  <MinHorizontalVelocity>0</MinHorizontalVelocity>
+		  <MaxHorizontalVelocity>15</MaxHorizontalVelocity>
+		  <MinVerticalVelocity>10</MinVerticalVelocity>
+		  <MaxVerticalVelocity>15</MaxVerticalVelocity>
+
+		  <Gravity>-20 2 0</Gravity>
+		  <EndVelocity>0.75</EndVelocity>
+		  <MinColor>00AAAAAA</MinColor>
+		  <MaxColor>88CCCCCC</MaxColor>
+		  <MinRotateSpeed>-1</MinRotateSpeed>
+		  <MaxRotateSpeed>1</MaxRotateSpeed>
+		  <MinStartSize>5</MinStartSize>
+		  <MaxStartSize>10</MaxStartSize>
+		  <MinEndSize>50</MinEndSize>
+		  <MaxEndSize>200</MaxEndSize>
+		  <SourceBlend>SourceAlpha</SourceBlend>
+		  <DestinationBlend>InverseSourceAlpha</DestinationBlend>
+	  </Settings>
+	  
+  </Asset>
+</XnaContent>

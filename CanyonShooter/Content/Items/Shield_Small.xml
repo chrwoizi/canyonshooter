@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+	<Asset Type="DescriptionLibs.Item.ItemDescription">
+		<ItemType>PLAYER</ItemType>
+		<NameValue>SHIELD</NameValue>
+		<Value>50</Value>
+	</Asset>
+</XnaContent>

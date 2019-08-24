@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+
+	<Asset Type="DescriptionLibs.EnemyType.EnemyTypeDescription">
+
+		<Model>MegaWumma</Model>
+		<MaxHitpoints>120</MaxHitpoints>
+		<Speed>50.0</Speed>
+		<Path>0 0 0</Path>
+		<Weapons>
+		</Weapons>
+		<Formation>0 0 0</Formation>
+		<ScorePoints>100</ScorePoints>
+	</Asset>
+
+</XnaContent>

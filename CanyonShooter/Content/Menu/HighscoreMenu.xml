@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="DescriptionLibs.Menu.HighscoreDescription">
+    <HighscorePart>
+      <Spacer>0 0</Spacer>
+      <Startposition>350 25</Startposition>
+      <ImageName>listbut</ImageName>
+      <ImageWidth>386</ImageWidth>
+      <ImageHeight>50</ImageHeight>
+    </HighscorePart>
+  </Asset>
+</XnaContent>

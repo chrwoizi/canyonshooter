@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="DescriptionLibs.Menu.ScrollBarDescription">
+    <UnitWidth>12</UnitWidth>
+    <UnitHeight>538</UnitHeight>
+    <Buttons>
+      <Item>
+        <ButtonName>ScrollUp</ButtonName>
+        <ButtonImage>scrollup</ButtonImage>
+        <height>15</height>
+        <width>15</width>
+        <BarName></BarName>
+        <BarPosition>0 0 0 0</BarPosition>
+      </Item>
+      <Item>
+        <ButtonName>ScrollDown</ButtonName>
+        <ButtonImage>scrolldown</ButtonImage>
+        <height>15</height>
+        <width>12</width>
+        <BarName></BarName>
+        <BarPosition>0 0 0 0</BarPosition>
+      </Item>
+    </Buttons>
+    <Textures>
+      <Item>
+        <Name>ScrollBar</Name>
+        <Image>scroll</Image>
+        <Width>12</Width>
+        <Height>524</Height>
+      </Item>
+      <Item>
+        <Name>ScrollButTop</Name>
+        <Image>scbuttop</Image>
+        <Width>12</Width>
+        <Height>1</Height>
+      </Item>
+      <Item>
+        <Name>ScrollButMain</Name>
+        <Image>scbutmid</Image>
+        <Width>12</Width>
+        <Height>1</Height>
+      </Item>
+      <Item>
+        <Name>ScrollButBottom</Name>
+        <Image>scbutdown</Image>
+        <Width>12</Width>
+        <Height>1</Height>
+      </Item>
+    </Textures>
+
+
+    </Asset>
+</XnaContent>

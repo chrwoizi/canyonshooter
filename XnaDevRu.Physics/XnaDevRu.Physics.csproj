@@ -1,0 +1,216 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{E333B389-4A1F-430E-8964-E1E26B541952}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XnaDevRu.Physics</RootNamespace>
+    <AssemblyName>XnaDevRu.Physics</AssemblyName>
+    <XnaFrameworkVersion>v2.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <Thumbnail>
+    </Thumbnail>
+    <XnaCrossPlatformGroupID>{9476e670-36e4-420c-92e3-88bc6eceb80d}</XnaCrossPlatformGroupID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PHYSICS_VARIABLE_TIMESTEP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;PHYSICS_VARIABLE_TIMESTEP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CollisionEvent.cs">
+      <Name>CollisionEvent</Name>
+    </Compile>
+    <Compile Include="Defaults.cs">
+      <Name>Defaults</Name>
+    </Compile>
+    <Compile Include="EventHandler.cs">
+      <Name>EventHandler</Name>
+    </Compile>
+    <Compile Include="Exceptions\PhysicsDataException.cs">
+      <Name>PhysicsDataException</Name>
+    </Compile>
+    <Compile Include="Exceptions\PhysicsException.cs">
+      <Name>PhysicsException</Name>
+    </Compile>
+    <Compile Include="Force.cs">
+      <Name>Force</Name>
+    </Compile>
+    <Compile Include="Joint.cs">
+      <Name>Joint</Name>
+    </Compile>
+    <Compile Include="JointData.cs">
+      <Name>JointData</Name>
+    </Compile>
+    <Compile Include="Mass.cs">
+      <Name>Mass</Name>
+    </Compile>
+    <Compile Include="Material.cs">
+      <Name>Material</Name>
+    </Compile>
+    <Compile Include="MathUtil.cs">
+      <Name>MathUtil</Name>
+    </Compile>
+    <Compile Include="Motors\AttractorMotor.cs">
+      <Name>AttractorMotor</Name>
+    </Compile>
+    <Compile Include="Motors\AttractorMotorData.cs">
+      <Name>AttractorMotorData</Name>
+    </Compile>
+    <Compile Include="Motors\GearedMotor.cs">
+      <Name>GearedMotor</Name>
+    </Compile>
+    <Compile Include="Motors\GearedMotorData.cs">
+      <Name>GearedMotorData</Name>
+    </Compile>
+    <Compile Include="Motors\Motor.cs">
+      <Name>Motor</Name>
+    </Compile>
+    <Compile Include="Motors\MotorData.cs">
+      <Name>MotorData</Name>
+    </Compile>
+    <Compile Include="Motors\ServoMotor.cs">
+      <Name>ServoMotor</Name>
+    </Compile>
+    <Compile Include="Motors\ServoMotorData.cs">
+      <Name>ServoMotorData</Name>
+    </Compile>
+    <Compile Include="Motors\SpringMotor.cs">
+      <Name>SpringMotor</Name>
+    </Compile>
+    <Compile Include="Motors\SpringMotorData.cs">
+      <Name>SpringMotorData</Name>
+    </Compile>
+    <Compile Include="Motors\ThrusterMotor.cs">
+      <Name>ThrusterMotor</Name>
+    </Compile>
+    <Compile Include="Motors\ThrusterMotorData.cs">
+      <Name>ThrusterMotorData</Name>
+    </Compile>
+    <Compile Include="Motors\VelocityMotor.cs">
+      <Name>VelocityMotor</Name>
+    </Compile>
+    <Compile Include="Motors\VelocityMotorData.cs">
+      <Name>VelocityMotorData</Name>
+    </Compile>
+    <Compile Include="MovementEvent.cs">
+      <Name>MovementEvent</Name>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <Name>AssemblyInfo</Name>
+    </Compile>
+    <Compile Include="Sensors\AccelerationSensor.cs">
+      <Name>AccelerationSensor</Name>
+    </Compile>
+    <Compile Include="Sensors\AccelerationSensorData.cs">
+      <Name>AccelerationSensorData</Name>
+    </Compile>
+    <Compile Include="Sensors\InclineSensor.cs">
+      <Name>InclineSensor</Name>
+    </Compile>
+    <Compile Include="Sensors\InclineSensorData.cs">
+      <Name>InclineSensorData</Name>
+    </Compile>
+    <Compile Include="Sensors\RaycastSensor.cs">
+      <Name>RaycastSensor</Name>
+    </Compile>
+    <Compile Include="Sensors\RaycastSensorData.cs">
+      <Name>RaycastSensorData</Name>
+    </Compile>
+    <Compile Include="Sensors\Sensor.cs">
+      <Name>Sensor</Name>
+    </Compile>
+    <Compile Include="Sensors\SensorData.cs">
+      <Name>SensorData</Name>
+    </Compile>
+    <Compile Include="Sensors\VolumeSensor.cs">
+      <Name>VolumeSensor</Name>
+    </Compile>
+    <Compile Include="Sensors\VolumeSensorData.cs">
+      <Name>VolumeSensorData</Name>
+    </Compile>
+    <Compile Include="Shapes\BoxShapeData.cs">
+      <Name>BoxShapeData</Name>
+    </Compile>
+    <Compile Include="Shapes\CapsuleShapeData.cs">
+      <Name>CapsuleShapeData</Name>
+    </Compile>
+    <Compile Include="Shapes\MeshShapeData.cs">
+      <Name>MeshShapeData</Name>
+    </Compile>
+    <Compile Include="Shapes\PlaneShapeData.cs">
+      <Name>PlaneShapeData</Name>
+    </Compile>
+    <Compile Include="Shapes\ShapeData.cs">
+      <Name>ShapeData</Name>
+    </Compile>
+    <Compile Include="Shapes\SphereShapeData.cs">
+      <Name>SphereShapeData</Name>
+    </Compile>
+    <Compile Include="Simulator.cs">
+      <Name>Simulator</Name>
+    </Compile>
+    <Compile Include="SimulatorData.cs">
+      <Name>SimulatorData</Name>
+    </Compile>
+    <Compile Include="Solid.cs">
+      <Name>Solid</Name>
+    </Compile>
+    <Compile Include="SolidData.cs">
+      <Name>SolidData</Name>
+    </Compile>
+    <Compile Include="SpaceBase.cs">
+      <Name>SpaceBase</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Content.contentproj">
+      <Project>{bc0ceee6-f129-434f-9f49-90b10b924495}</Project>
+      <Visible>False</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.Common.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.NestedContent.targets" />
+</Project>
